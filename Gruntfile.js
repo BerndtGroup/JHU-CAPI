@@ -34,7 +34,7 @@ module.exports = function (grunt) {
             },
             sass: {
                 files: ['<%= config.app %>/**/*.scss'],
-                tasks: ['sasslint', 'sass:server', 'postcss', 'replace:sourceMaps']
+                tasks: ['sasslint', 'sass:appToTmpServer', 'postcss', 'replace:sourceMaps']
             },
             assemble: {
                 files: [
@@ -42,7 +42,7 @@ module.exports = function (grunt) {
                     '<%= config.app %>/modules/**/*.{hbs,json,yml,yaml}',
                     '<%= config.app %>/templates/**/*.{hbs,json,yml,yaml}'
                 ],
-                tasks: ['assemble']
+                tasks: ['assemble', 'copy:templatesToTmp']
             },
             js: {
                 files: [
@@ -50,7 +50,7 @@ module.exports = function (grunt) {
                     '<%= config.app %>/modules/**/*.js',
                     '<%= config.app %>/js/**/*.js'
                 ],
-                tasks: ['jshint', 'browserify:server']
+                tasks: ['jshint', 'browserify:appToTmpServer']
             },
             images: {
                 files: ['<%= config.app %>/images/{,*/}*']
@@ -93,16 +93,52 @@ module.exports = function (grunt) {
 
         // Add folders individually so we only delete Front End-specific files
         clean: {
-            all: {
+            app: {
+                files: [{
+                    dot: true,
+                    src: [
+                        '<%= config.app %>/productionTemplates/**'
+                    ]
+                }]
+            },
+            tmp: {
+                files: [{
+                    dot: true,
+                    src: [
+                        '.tmp/**/*',
+                    ]
+                }]
+            },
+            tmpServer: {
                 files: [{
                     dot: true,
                     src: [
                         '.tmp/css/**',
-                        '.tmp/js/**',
-                        '<%= config.dist %>/**/*'
+                        '.tmp/js/*.js'
                     ]
                 }]
-            }
+            },
+            dist: {
+                files: [{
+                    dot: true,
+                    src: [
+                        '<%= config.dist %>/css/**',
+                        '<%= config.dist %>/fonts/**',
+                        '<%= config.dist %>/images/**',
+                        '<%= config.dist %>/js/**',
+                        '<%= config.dist %>/pattern-library/**',
+                        '<%= config.dist %>/productionTemplates/**',
+                        '<%= config.dist %>/apple-touch-icon.png',
+                        '<%= config.dist %>/browserconfig.xml',
+                        '<%= config.dist %>/favicon-16x16.png',
+                        '<%= config.dist %>/favicon-32x32.png',
+                        '<%= config.dist %>/favicon.ico',
+                        '<%= config.dist %>/mstile-150x150.png',
+                        '<%= config.dist %>/safari-pinned-tab.svg',
+                        '<%= config.dist %>/index.html'
+                    ]
+                }]
+            },
         },
 
         jshint: {
@@ -120,7 +156,7 @@ module.exports = function (grunt) {
         },
 
         browserify: {
-            dist: {
+            appToTmp: {
                 options: {
                     transform: [
                         ['babelify', {
@@ -142,7 +178,7 @@ module.exports = function (grunt) {
                     ext: '.js'
                 }]
             },
-            server: {
+            appToTmpServer: {
                 options: {
                     transform: [
                         ['babelify', {
@@ -167,7 +203,7 @@ module.exports = function (grunt) {
         },
 
         sass: {
-            dist: {
+            appToTmp: {
                 options: {
                     includePaths: [
                         '<%= config.app %>',
@@ -185,7 +221,7 @@ module.exports = function (grunt) {
                     ext: '.css'
                 }]
             },
-            server: {
+            appToTmpServer: {
                 options: {
                     includePaths: [
                         '<%= config.app %>',
@@ -223,7 +259,7 @@ module.exports = function (grunt) {
             options: {
                 map: true,
                 processors: [
-                    require('autoprefixer')({browsers: ['last 2 versions']})
+                    require('autoprefixer')({browsers: ['last 2 versions', 'iOS >= 6', 'ie >= 8']})
                 ]
             },
             all: {
@@ -238,7 +274,7 @@ module.exports = function (grunt) {
         },
 
         uglify: {
-            dist: {
+            tmp: {
                 files: [{
                     expand: true,
                     cwd: '.tmp/js',
@@ -270,7 +306,7 @@ module.exports = function (grunt) {
         },
 
         imageEmbed: {
-            dist: {
+            tmp: {
                 options: {
                     maxImageSize: 10000,
                     baseDir: './<%= config.dist %>',
@@ -279,7 +315,7 @@ module.exports = function (grunt) {
                 files: [{
                     expand: true,
                     cwd: '.tmp/css/',
-                    src: ['*.css'],
+                    src: ['main.css'],
                     dest: '.tmp/css',
                     ext: '.css'
                 }]
@@ -287,7 +323,7 @@ module.exports = function (grunt) {
         },
 
         imagemin: {
-            dist: {
+            tmp: {
                 options: {
                     svgoPlugins: [{
                         convertPathData: false
@@ -300,14 +336,14 @@ module.exports = function (grunt) {
                 files: [{
                     expand: true,
                     cwd: '<%= config.app %>/images',
-                    src: '{,*/}*.{png,jpg,jpeg,svg}',
+                    src: '**/*.{png,jpg,jpeg,svg}',
                     dest: '.tmp/images'
                 }]
             }
         },
 
         cssmin: {
-            dist: {
+            tmp: {
                 expand: true,
                 cwd: '.tmp/css/',
                 src: ['*.css'],
@@ -317,37 +353,68 @@ module.exports = function (grunt) {
 
         // Put files not handled in other tasks here
         copy: {
-            dist: {
+            appToTmp: {
                 files: [{
                     expand: true,
                     dot: true,
                     cwd: '<%= config.app %>',
-                    dest: '<%= config.dist %>',
+                    dest: '.tmp',
                     src: [
-                        'favicon.ico',
                         'apple-touch-icon.png',
-                        'tile.png',
-                        'tile-wide.png',
                         'browserconfig.xml',
+                        'favicon-16x16.png',
+                        'favicon-32x32.png',
+                        'favicon.ico',
+                        'mstile-150x150.png',
+                        'safari-pinned-tab.svg',
                         'ProductionTemplates/{,*/}*.html',
                         'pattern-library/**/*',
-                        'images/{,*/}*.{webp,gif}',
+                        'images/{,*/}*.{webp,gif,mp4}',
                         'css/**/*.css',
-                        'fonts/*'
+                        'fonts/*',
+                        'data/*'
                     ]
-                }, {
+                }]
+            },
+            templatesToTmp: {
+                files: [{
                     expand: true,
+                    dot: true,
+                    cwd: '<%= config.app %>',
+                    dest: '.tmp',
+                    src: [
+                        'ProductionTemplates/{,*/}*.html'
+                    ]
+                }]
+            },
+            TemplatesToTmpGhPages: {
+                files: [{
+                    expand: true,
+                    flatten: true,
+                    dot: true,
+                    cwd: '<%= config.app %>',
+                    dest: '.tmp',
+                    src: [
+                        'ProductionTemplates/{,*/}*.html'
+                    ]
+                }]
+            },
+            tmpAndPatternLibraryToDist: {
+                files: [{
+                    expand: true,
+                    dot: true,
                     cwd: '.tmp',
                     dest: '<%= config.dist %>',
-                    src: ['css/**/*', 'js/**/*', 'images/**/*']
-                }, {
+                    src: ['**/*']
+                },
+                {
                     expand: true,
                     cwd: '<%= config.app %>/pattern-library',
                     dest: '<%= config.dist %>',
                     src: ['index.html']
                 }]
             },
-            vendorCss: {
+            appVendorCssToTmp: {
                 files: [{
                     expand: true,
                     cwd: '<%= config.app %>/css/vendor',
@@ -355,7 +422,7 @@ module.exports = function (grunt) {
                     src: ['**/*.css']
                 }]
             },
-            vendorJs: {
+            appVendorJsToTmp: {
                 files: [{
                     expand: true,
                     cwd: '<%= config.app %>/js/vendor',
@@ -373,6 +440,14 @@ module.exports = function (grunt) {
                 replacements: [{
                     from: '../../FrontEndSrc',
                     to: ''
+                }]
+            },
+            patternLibrary: {
+                src: ['.tmp/**/*.html'],
+                overwrite: true,
+                replacements: [{
+                    from: '\\',
+                    to: '/'
                 }]
             }
         },
@@ -411,11 +486,32 @@ module.exports = function (grunt) {
         },
 
         concurrent: {
-            dist: [
-                'browserify:dist',
-                'sass:dist',
+            tmp: [
+                'browserify:appToTmp',
+                'sass:appToTmp',
                 'newer:imagemin'
             ]
+          },
+
+        'gh-pages': {
+            options: {
+                base: '.tmp/'
+            },
+            src: ['**/*']
+        },
+
+        relativeRoot: {
+            productionTemplates: {
+                options: {
+                    root: '.tmp'
+                },
+                files: [{
+                    expand: true,
+                    cwd: '<%= relativeRoot.productionTemplates.options.root %>',
+                    src: ['css/*.css', '**/*.html', '**/*.css'],
+                    dest: '.tmp/'
+                }]
+            }
         }
     });
 
@@ -425,15 +521,20 @@ module.exports = function (grunt) {
         }
 
         grunt.task.run([
-            'clean',
-            'copy:vendorCss',
+            // Clean
+            'clean:tmpServer',
+            // Server
             'connect:livereload',
-            'sass:server',
-            'browserify:server',
+            // Copy
+            'browserify:appToTmpServer',
+            'sass:appToTmpServer',
             'postcss',
             'replace:sourceMaps',
+            // Build
             'assemble',
+            // YAPL
             'yapl',
+            // Open and Watch
             'open',
             'watch'
         ]);
@@ -445,17 +546,30 @@ module.exports = function (grunt) {
     ]);
 
     grunt.registerTask('build', [
-        'clean',
-        'copy:vendorCss',
-        'copy:vendorJs',
+        // Clean
+        'clean:app',
+        'clean:tmp',
+        // Build
         'assemble:pages',
+        // Copy
+        // 'copy:appVendorCssToTmp',
+        'copy:appVendorJsToTmp',
+        'copy:appToTmp',
+        // Concurrent: browserify:appToTmp, sass:appToTmp, newer:imagemin
+        'concurrent:tmp',
+        // YAPL
         'yapl',
-        'concurrent:dist',
-        'uglify',
-        'copy:dist',
-        'postcss',
-        'imageEmbed:dist',
-        'cssmin'
+        // Post
+        'uglify', // uglify JS in tmp
+        'postcss', // add autoprefixer
+        'cssmin:tmp', // minify css in tmp
+        'replace:patternLibrary'
+    ]);
+
+    grunt.registerTask('bed', [
+        'clean:dist',
+        // 'imageEmbed:tmp', //FIXME Throwing error
+        'copy:tmpAndPatternLibraryToDist'
     ]);
 
     grunt.registerTask('default', function () {
@@ -468,6 +582,40 @@ module.exports = function (grunt) {
         grunt.task.run([
             'test',
             'build'
+        ]);
+    });
+
+    grunt.registerTask('publish', [
+        // Clean
+        'clean:app',
+        'clean:tmp',
+        // Build
+        'assemble:pages',
+        // Copy
+        // 'copy:appVendorCssToTmp',
+        'copy:appVendorJsToTmp',
+        'copy:appToTmp',
+        'copy:TemplatesToTmpGhPages',
+        // Concurrent: browserify:appToTmp, sass:appToTmp, newer:imagemin
+        'concurrent:tmp',
+        // YAPL
+        'yapl',
+        // Post
+        'uglify', // uglify JS in tmp
+        'postcss', // add autoprefixer
+        'cssmin:tmp', // minify css in tmp
+        'replace:patternLibrary',
+        'relativeRoot',
+        // Push to GitHub Pages
+        'gh-pages',
+        // Clean out production templates at .tmp/
+        // 'clean:tmp'
+      ]);
+
+    grunt.registerTask('dist', function () {
+        grunt.task.run([
+            'build',
+            'bed'
         ]);
     });
 };

@@ -26,6 +26,7 @@
     "grunt-contrib-jshint": "^1.0.0",
     "grunt-contrib-uglify": "^2.0.0",
     "grunt-contrib-watch": "^1.0.0",
+    "grunt-gh-pages": "^2.0.0",
     "grunt-image-embed-src": "^0.1.1",
     "grunt-newer": "^1.2.0",
     "grunt-npm-install": "^0.3.0",
