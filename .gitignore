@@ -1,0 +1,14 @@
+# =========================
+# Front End Build-Related
+# =========================
+
+node_modules
+npm-debug.log
+.DS_STORE
+.tmp
+.sass-cache
+FrontEndSrc/templates/data/images.json
+FrontEndSrc/ProductionTemplates
+FrontEndSrc/pattern-library
+!FrontEndSrc/images/temp/
+Website

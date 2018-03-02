@@ -1,0 +1,19 @@
+<figure class="figure js-figure {{modifier}}">
+    {{#if img}}
+        <div class="figure__img">
+            <img src="{{src}}" alt="">
+        </div>
+    {{/if}}
+
+    {{#if video}}
+        <div class="figure__video js-figure-video">
+            <iframe width="853" height="480" src="{{video}}" frameborder="0" allowfullscreen></iframe>
+        </div>
+    {{/if}}
+
+    {{#if caption}}
+        <figcaption class="figure__caption">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel nesciunt provident eligendi cumque.</p>
+        </figcaption>
+    {{/if}}
+</figure>

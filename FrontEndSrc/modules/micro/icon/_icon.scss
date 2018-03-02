@@ -1,0 +1,24 @@
+/* ====== Icon Styles ====== */
+
+
+// List all icon names here, in quotes, without the "icon-" prefix or extension
+$icons: 'test';
+
+%icon {
+    background-repeat: no-repeat;
+}
+
+// All svg icons following the standard approach.
+@each $icon in $icons {
+
+    // Extend only class (use this to extend in other files)
+    %icon-#{$icon} {
+        @extend %icon;
+        background-image: url('/images/assets/icon-#{$icon}.svg');
+    }
+
+    // Icon class (do not extend this, only use in html)
+    .icon-#{$icon} {
+        @extend %icon-#{$icon};
+    }
+}

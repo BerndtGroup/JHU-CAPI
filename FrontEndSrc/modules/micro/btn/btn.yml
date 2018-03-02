@@ -1,0 +1,8 @@
+default:
+  tag: "button"
+  modifier: ""
+  text: "Button"
+blue:
+  tag: "a"
+  modifier: "btn--blue"
+  text: "Blue Button"

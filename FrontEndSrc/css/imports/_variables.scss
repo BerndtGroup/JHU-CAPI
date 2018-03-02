@@ -1,0 +1,45 @@
+/* ======  Sass Variables ====== */
+
+// Define global variables here in css-case (hyphenated). Module-specific variables go with individual module files.
+
+
+
+// Colors
+$black: #000;
+$link-blue: #006cd8;
+$selection-blue: #b3d4fc;
+
+
+// Type
+$arial: Arial, sans-serif;
+
+
+// Base width/padding for different screen sizes
+$mobile-side-pad: 4%;
+$tablet-side-pad: 20px;
+$desktop-inner-width: 96%;
+$desktop-max-width: 1215px;
+
+
+// Z-Index Scale
+$z-index-1: 100;
+$z-index-2: 200;
+$z-index-3: 300;
+$z-index-4: 400;
+$z-index-5: 500;
+$z-index-6: 600;
+$z-index-7: 700;
+$z-index-8: 800;
+$z-index-9: 900;
+$z-index-10: 1000;
+
+
+// Z-index- Applications
+$z-index-header: $z-index-1;
+
+$z-index-primary-nav: $z-index-2;
+$z-index-utility-nav: $z-index-2;
+
+$z-index-logo: $z-index-3;
+
+$z-index-modal: $z-index-4;

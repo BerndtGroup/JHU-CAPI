@@ -1,0 +1,18 @@
+/* ====== Button Styles ====== */
+
+/* SG
+name: Default button
+notes: The default button style without any modifiers
+partial: btn
+context: btn.default
+*/
+
+.btn {
+    cursor: pointer;
+    display: inline-block;
+    line-height: 1;
+
+    &:hover {
+        text-decoration: none;
+    }
+}

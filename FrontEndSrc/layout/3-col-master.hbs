@@ -1,0 +1,21 @@
+---
+layout: default.hbs
+cols: 3
+---
+
+
+<div class="l-3-col-master u-cf">
+
+    {{> content-nav }}
+
+    <!-- Primary content container -->
+    <main class="l-content-primary">
+        {{#block "content-primary"}}{{/block}}
+    </main><!-- .content-primary -->
+
+    <!-- Secondary content container -->
+    <section class="l-content-secondary">
+        {{#block "content-secondary"}}{{/block}}
+    </section><!-- .content-secondary -->
+
+</div><!-- .l-3-col-master -->

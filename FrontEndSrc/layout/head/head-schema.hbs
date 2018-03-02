@@ -1,0 +1,42 @@
+
+<!--
+    *** Only show this "potentialAction" section on the HOME / INDEX of the site, and change markup to match the site: ***
+
+    - "url" — This property specifies the URL of your website. It must match the canonical URL of your domain's homepage.
+    - potentialAction:target — This property specifies a search URL pattern for sending queries to your site's search engine.
+    - query-input — the value for the name attribute of query-input must match the string enclosed inside curly braces in the target property of potentialAction.
+
+    More info here: https://developers.google.com/structured-data/slsb-overview
+-->
+<script type="application/ld+json">
+{
+   "@context": "http://schema.org",
+   "@type": "WebSite",
+   "url": "[URL]",
+   "copyrightYear": "2016",
+   "sourceOrganization": {
+     "@type": "Organization",
+     "name": "[ORG NAME]",
+     "url": "[ORG URL]",
+     "location" : {
+       "@type" : "PostalAddress",
+       "streetAddress" : "[ORG ADDR]",
+       "addressLocality" : "[ORG CITY]",
+       "addressRegion" : "[ORG STATE]",
+       "postalCode" : "[ORG ZIP]"
+     }
+   },
+   "sameAs": [
+     "[ORG FB URL]",
+     "[ORG TWITTER URL]",
+     "[ORG LINKEDIN URL]"
+   ],
+{{#if sitelinks-searchbox}}
+   "potentialAction": {
+     "@type": "SearchAction",
+     "target": "[SEARCH URL]?q={search_term_string}",
+     "query-input": "required name=search_term_string"
+   }
+{{/if}}
+}
+</script>

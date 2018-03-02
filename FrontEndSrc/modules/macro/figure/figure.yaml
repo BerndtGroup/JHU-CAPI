@@ -1,0 +1,13 @@
+mainImage:
+  img: true
+  caption: true
+  src: http://placehold.it/350x150
+
+videoNoCaption:
+  video: https://www.youtube.com/watch?v=NK2_bcQcoD4
+
+mainImageRight:
+  modifier: u-float-r
+  img: true
+  caption: true
+  src: http://placehold.it/350x150

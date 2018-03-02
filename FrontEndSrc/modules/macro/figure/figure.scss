@@ -1,0 +1,62 @@
+/* YAPL
+name: Figure (image w/caption)
+notes: Main image and caption
+context: figure.mainImage
+*/
+
+/* YAPL
+name: Figure (image w/caption)
+notes: Main image and caption - Floated Right
+context: figure.mainImageRight
+*/
+
+/* YAPL
+name: Figure (video)
+notes: Main video without caption
+context: figure.videoNoCaption
+*/
+
+
+.rtf figure,
+figure.figure {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+
+    figcaption,
+    .figure__caption {
+        caption-side: bottom;
+        display: table-caption;
+    }
+
+    &.u-float-l,
+    &.u-float-r {
+        width: auto;
+        max-width: 60%;
+    }
+}
+
+.rtf img,
+.rtf figure {
+    max-width: 100%;
+}
+
+.figure__img {
+    img {
+        margin: 0;
+        width: 100%;
+    }
+}
+
+.figure__video {
+    padding-bottom: 56.2719812%;
+    position: relative;
+
+    iframe {
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+}

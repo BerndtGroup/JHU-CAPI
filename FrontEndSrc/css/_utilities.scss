@@ -1,0 +1,135 @@
+/* ======  Global Utility Classes ====== */
+
+.u-align-l {
+    text-align: left;
+}
+
+.u-align-r {
+    text-align: right;
+}
+
+.u-align-center {
+    text-align: center;
+}
+
+.u-block {
+    display: block;
+}
+
+// Micro clearfix
+.u-cf {
+
+    &::after,
+    &::before {
+        content: ' ';
+        display: table;
+    }
+
+    &::after {
+        clear: both;
+    }
+}
+
+.u-float-l {
+    float: left;
+}
+
+.u-float-r {
+    float: right;
+}
+
+.u-hidden {
+    display: none !important;
+}
+
+.u-inline {
+    display: inline;
+}
+
+.u-inline-block {
+    display: inline-block;
+}
+
+.u-invisible {
+    visibility: hidden;
+}
+
+.u-overflow-visible {
+    overflow: visible;
+}
+
+.u-overflow-x-scroll {
+    overflow-x: scroll;
+}
+
+.u-visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.u-visuallyhidden.focusable:active,
+.u-visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+
+@include small-only {
+
+    .u-float-l-mq-small {
+        float: left;
+    }
+
+    .u-float-r-mq-small {
+        float: right;
+    }
+
+    .u-hidden-mq-small {
+        display: none !important;
+    }
+
+}
+
+
+@include medium-only {
+
+    .u-float-l-mq-medium {
+        float: left;
+    }
+
+    .u-float-r-mq-medium {
+        float: right;
+    }
+
+    .u-hidden-mq-medium {
+        display: none !important;
+    }
+
+}
+
+
+@include large-and-above {
+
+    .u-float-l-mq-large {
+        float: left;
+    }
+
+    .u-float-r-mq-large {
+        float: right;
+    }
+
+    .u-hidden-mq-large {
+        display: none !important;
+    }
+
+}

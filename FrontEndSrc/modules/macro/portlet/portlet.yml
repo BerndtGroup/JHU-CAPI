@@ -1,0 +1,4 @@
+example:
+  modifier: "portlet--example"
+  title: "Portlet Title"
+  text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
