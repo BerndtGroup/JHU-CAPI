@@ -1,9 +1,9 @@
 {
-  "name": "project-name",
+  "name": "JHU CAPI HTML",
   "version": "0.1.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/BerndtGroup/TBG-Front-End-Boilerplate"
+    "url": "https://github.com/BerndtGroup/JHU-CAPI-HTML"
   },
   "dependencies": {
     "classlist-polyfill": "^1.0.3"
