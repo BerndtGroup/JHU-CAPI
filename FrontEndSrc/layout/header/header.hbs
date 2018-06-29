@@ -1,11 +1,24 @@
 {{! The Header Partial }}
 
-<header class="l-header">
-
-    <div class="nav-wrap js-nav-wrap">
-        <div class="l-contain">
-            {{> nav-primary }}
+<header class="l-header js-header">
+    <div class="l-header__inner">
+        <a href="/index.html" class="header__logo">Radar Resource Center</a>
+        <div class="header__mobile-toggle u-hidden-mq-medium u-hidden-mq-large">
+            {{> hamburger }}
+            <span class="u-hidden" aria-hidden="true">Toggle Mobile Menu</span>
+        </div>
+        <div class="nav-wrap js-nav-wrap">
+            <div class="l-utility-nav">
+                <nav class="utility-nav">
+                    <ul class="utility-nav__items">
+                        <li class="utility-nav__item"><a href="#" class="btn btn--hollow">Additional Resources</a></li>
+                        <li class="utility-nav__item"><a href="#" class="btn btn--hollow">Contributors</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="l-nav-primary">
+                {{> nav-primary }}
+            </div>
         </div>
     </div>
-
 </header>

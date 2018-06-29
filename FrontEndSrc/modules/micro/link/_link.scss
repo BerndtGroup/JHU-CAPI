@@ -1,0 +1,37 @@
+.icon-link {
+    align-items: center;
+    display: inline-flex;
+    justify-content: space-between;
+
+    &::before {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        content: '';
+        display: inline-block;
+        height: rem-calc(30);
+        width: rem-calc(30);
+    }
+}
+
+.icon-link--before {
+    &::before {
+        margin-right: 15px;
+        order: 0;
+    }
+}
+
+.icon-link--after {
+    &::before {
+        margin-left: 15px;
+        order: 2;
+    }
+}
+
+.icon-link--email::before {
+    background-image: url('/images/assets/icon/envelope--teal.svg');
+}
+
+.icon-link--phone::before {
+    background-image: url('/images/assets/icon/phone--teal.svg');
+}

@@ -1,3 +1,121 @@
 /* ======  Header Styles ====== */
 
-// .l-header {}
+.l-header {
+    background-color: $white;
+    position: fixed;
+    width: 100%;
+    z-index: 9;
+
+    a {
+        display: inline-block;
+        text-decoration: none;
+    }
+
+    @include small-only {
+        box-shadow: 0 0 rem-calc(30) rgba($black, .3);
+
+        &.menu-is-open {
+            border-radius: 0 0 9px 9px;
+        }
+    }
+
+    @include medium-and-above {
+        background: linear-gradient(rgba($blue-1, .8) 65%, transparent 95%);
+        height: 255px;
+        padding: 4rem 0;
+        transition: .5s ease;
+        transition-property: height, padding;
+
+        will-change: height, padding;
+
+        &.is-collapsed {
+            height: 140px;
+            padding: 1.25rem;
+
+            .l-header__inner {
+                align-items: center;
+            }
+
+            .nav-wrap {
+                height: 0%;
+            }
+
+            .header__logo {
+                font-size: rem-calc(18);
+                margin-bottom: .25rem;
+            }
+        }
+    }
+}
+
+.l-header__inner {
+    @include small-only {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-top: 1rem;
+    }
+
+    @include medium-and-above {
+        align-items: flex-end;
+        border-bottom: 2px solid $white;
+        display: flex;
+        justify-content: space-between;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: $contain-max-width;
+        padding-bottom: .5rem;
+        width: $contain-inner-width;
+    }
+}
+
+.header__mobile-toggle {
+    margin-top: rem-calc(6);
+    padding-right: 1rem;
+}
+
+.header__logo {
+    font-size: rem-calc(24);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+    max-width: rem-calc(125);
+    padding-left: 1rem;
+    text-transform: uppercase;
+    transition: .5s ease;
+    transition-property: font-size, margin;
+
+    @include small-only {
+        color: $black;
+        font-size: rem-calc(16);
+        margin-bottom: 1rem;
+        max-width: rem-calc(160);
+    }
+
+    @include medium-and-above {
+        color: $white;
+    }
+}
+
+@include small-only {
+    .nav-wrap {
+        display: flex;
+        flex-direction: column;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height .5s ease;
+        width: 100%;
+
+        .menu-is-open & {
+            max-height: rem-calc(600);
+        }
+    }
+
+    .l-nav-primary {
+        order: 1;
+    }
+
+    .l-utility-nav {
+        order: 2;
+    }
+}

@@ -3,7 +3,7 @@
 export default function() {
 
     var _self,
-        wrap;
+        $wrap;
 
     return {
 
@@ -11,16 +11,16 @@ export default function() {
             _self = this;
 
             if (options.wrap) {
-                wrap = options.wrap;
+                $wrap = $(options.wrap);
             }
 
-            if (wrap) {
+            if ($wrap) {
                 _self.bindUIActions();
             }
         },
 
         bindUIActions: function() {
-            wrap.on('click', _self.events.wrapClick);
+            $wrap.on('click', _self.events.wrapClick);
         },
 
         events: {
@@ -28,7 +28,5 @@ export default function() {
                 console.log('1');
             }
         }
-
     };
-
 }

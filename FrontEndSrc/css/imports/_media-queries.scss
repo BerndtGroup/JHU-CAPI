@@ -2,14 +2,17 @@
 
 // Change "mq" values as needed for the project
 
-$mq-0: 290px !default;
-$mq-1: 675px !default;
+$mq-0: 400px !default;
+$mq-1: 650px !default;
 $mq-2: 1050px !default;
-$mq-3: 1215px !default;
+$mq-3: 1400px !default;
+
+$mq-v-0: 700px !default;
+$mq-v-1: 950px !default;
 
 // Handles super skinny
 @mixin extra-small-only {
-    @media only screen and (max-width: $mq-0) {
+    @media (max-width: $mq-0) {
         @content;
     }
 }
@@ -22,69 +25,83 @@ $mq-3: 1215px !default;
 }
 
 @mixin medium-only {
-    @media only screen and (min-width: $mq-1 + 1) and (max-width: $mq-2) {
+    @media (min-width: $mq-1 + 1) and (max-width: $mq-2) {
         @content;
     }
 }
 
 @mixin medium-and-above {
-    @media only screen and (min-width: $mq-1 + 1) {
+    @media (min-width: $mq-1 + 1) {
         @content;
     }
 }
 
 @mixin medium-and-below {
-    @media only screen and (max-width: $mq-2) {
+    @media (max-width: $mq-2) {
         @content;
     }
 }
 
 @mixin large-only {
-    @media only screen and (min-width: $mq-2 + 1) and (max-width: $mq-3) {
+    @media (min-width: $mq-2 + 1) and (max-width: $mq-3) {
         @content;
     }
 }
 
 @mixin large-and-above {
-    @media only screen and (min-width: $mq-2 + 1) {
+    @media (min-width: $mq-2 + 1) {
         @content;
     }
 }
 
 @mixin large-and-below {
-    @media only screen and (max-width: $mq-3) {
+    @media (max-width: $mq-3) {
         @content;
     }
 }
 
 @mixin very-large-only {
-    @media only screen and (min-width: $mq-3 + 1) {
+    @media (min-width: $mq-3 + 1) {
         @content;
     }
 }
 
 // Unique combination media queries
 @mixin small-and-large-only {
-    @media only screen and (max-width: $mq-1), (min-width: $mq-2 + 1) and (max-width: $mq-3) {
+    @media (max-width: $mq-1), (min-width: $mq-2 + 1) and (max-width: $mq-3) {
         @content;
     }
 }
 
 @mixin small-and-large-and-above {
-    @media only screen and (max-width: $mq-1), (min-width: $mq-2 + 1) {
+    @media (max-width: $mq-1), (min-width: $mq-2 + 1) {
         @content;
     }
 }
 
 @mixin medium-and-very-large-only {
-    @media only screen and (min-width: $mq-1 + 1) and (max-width: $mq-2), screen and (min-width: $mq-3 + 1) {
+    @media (min-width: $mq-1 + 1) and (max-width: $mq-2), (min-width: $mq-3 + 1) {
         @content;
     }
 }
 
 // Retina screens have a 1.5 pixel ratio, not 2
 @mixin retina {
-    @media only screen and (min-device-pixel-ratio: 1.5) {
+    @media (min-device-pixel-ratio: 1.5) {
+        @content;
+    }
+}
+
+
+// Vertical media queries
+@mixin short-height-only {
+    @media (max-height: $mq-v-0) {
+        @content;
+    }
+}
+
+@mixin large-height-and-above {
+    @media (min-height: $mq-v-1) {
         @content;
     }
 }

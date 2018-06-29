@@ -1,3 +1,213 @@
 /* ======  Primary Navigation Styles ====== */
 
-// .nav-primary {}
+.nav-primary {
+    li {
+        font-weight: $weight-bold;
+        text-transform: uppercase;
+
+        @include medium-and-above {
+            display: inline-block;
+        }
+    }
+}
+
+.nav-primary__l1-items {
+    @include small-only {
+        background-color: $teal-1;
+        position: relative;
+    }
+}
+
+.nav-primary__l1-item {
+    @include small-only {
+        display: block;
+        text-align: center;
+
+        &:last-child {
+            .nav-primary__l1-item-link {
+                border: 0;
+            }
+        }
+    }
+
+    @include medium-and-above {
+        margin: 0 1rem;
+        position: relative;
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &:hover,
+        &.is-focused {
+            .nav-primary__l2-items {
+                opacity: 1;
+                pointer-events: auto;
+                visibility: visible;
+            }
+        }
+    }
+
+    &.nav-primary__l1-item--has-dropdown {
+        .nav-primary__l1-item-link {
+            align-items: center;
+            display: inline-flex;
+            flex-wrap: nowrap;
+            justify-content: center;
+            padding: 1rem 1.5rem;
+
+            &::after {
+                background-image: url('/images/assets/icon/caret-down.svg');
+                background-repeat: no-repeat;
+                background-size: contain;
+                content: '';
+                display: block;
+                height: 7px;
+                margin-left: rem-calc(15);
+                transition: transform .3s ease;
+                width: 14px;
+            }
+        }
+
+        @include small-only {
+            &.menu-is-open {
+                .nav-primary__l1-item-link {
+                    &::after {
+                        transform: rotateZ(180deg);
+                    }
+                }
+            }
+        }
+
+        @include medium-and-above {
+            border-radius: 9px 9px 0 0;
+            margin-right: .5rem;
+            transition: background-color .3s ease;
+
+            &:hover,
+            &:focus {
+                background-color: $teal-1;
+
+                .nav-primary__l1-item-link {
+                    &::after {
+                        transform: rotateZ(180deg);
+                    }
+
+                    > .nav-primary__link-text {
+                        &::before {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.nav-primary__l1-item-link {
+    color: $white;
+
+    @include small-only {
+        border-bottom: .5px solid $white;
+        display: block;
+        font-size: rem-calc(14);
+        font-weight: $weight-medium;
+        margin: 0 2rem;
+        padding: 1rem 2rem;
+        width: calc(100% - 4rem);
+    }
+
+    @include medium-and-above {
+        &:hover,
+        &:focus {
+            .nav-primary__link-text::before {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.nav-primary__link-text {
+    position: relative;
+
+    &::before {
+        background-color: $white;
+        bottom: -5px;
+        content: '';
+        display: block;
+        height: rem-calc(2);
+        left: 0;
+        position: absolute;
+        transition: width .3s ease;
+        width: 0;
+        will-change: width;
+    }
+}
+
+.nav-primary__l2-items {
+    background-color: $white;
+
+    @include small-only {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height .5s ease;
+
+        .js-nav-primary-l1.menu-is-open & {
+            max-height: rem-calc(500);
+        }
+    }
+
+    @include medium-and-above {
+        border-radius: 0 0 9px 9px;
+        opacity: 0;
+        pointer-events: none;
+        position: absolute;
+        top: 100%;
+        transition: opacity .3s ease;
+        visibility: hidden;
+    }
+
+    .nav-primary__l2-item {
+        border-bottom: 1px solid $gray-1;
+
+        @include small-only {
+            margin: 0 2rem;
+            width: calc(100% - 4rem);
+        }
+
+        @include medium-and-above {
+            width: 100%;
+        }
+
+        &:last-child {
+            border: 0;
+
+            .nav-primary__l2-item-link {
+                border-radius: 0 0 9px 9px;
+            }
+        }
+    }
+
+    .nav-primary__l2-item-link {
+        color: $black;
+        display: block;
+        line-height: 1.3;
+        padding: .75rem 1.5rem;
+        text-transform: capitalize;
+        width: 100%;
+
+        @include small-only {
+            font-size: rem-calc(12);
+        }
+
+        &:hover,
+        &:focus {
+            background-color: $teal-1;
+            color: $white;
+        }
+    }
+}

@@ -1,12 +1,13 @@
 {
-  "name": "JHU CAPI HTML",
+  "name": "jhu-capi-html",
   "version": "0.1.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/BerndtGroup/JHU-CAPI-HTML"
   },
   "dependencies": {
-    "classlist-polyfill": "^1.0.3"
+    "lodash.debounce": "^4.0.8",
+    "lodash.throttle": "^4.1.1"
   },
   "devDependencies": {
     "autoprefixer": "^6.4.1",

@@ -1,0 +1,21 @@
+homepage:
+  items:
+    - icon: 'assets/icon/book--teal.svg'
+      title: How-To-Guides
+      inner: >
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</p>
+        <a href="#" class="btn btn--hollow">View Guides</a>
+        <div class="tile__inner-border"></div>
+    - icon: 'assets/icon/notes--teal.svg'
+      title: Questionnaires
+    - icon: 'assets/icon/graphs--teal.svg'
+      title: Dash Reports
+    - icon: 'assets/icon/layers--teal.svg'
+      title: Nav Item 4
+    - icon: 'assets/icon/folder--teal.svg'
+      title: Additional Resources
+    - icon: 'assets/icon/question--teal.svg'
+      title: Questions? Contact us
+      inner: >
+        <a href="mailto:emailaddress@jhu.edu" class="icon-link icon-link--email icon-link--before">emailaddress@jhu.edu</a>
+        <a href="410-955-3543" class="icon-link icon-link--phone icon-link--before">410-955-3543</a>

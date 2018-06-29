@@ -24,6 +24,8 @@
 @import 'modules/micro/icon/icon';
 @import 'modules/micro/rtf/rtf';
 @import 'modules/micro/table/table';
+@import 'modules/micro/link/link';
+@import 'modules/micro/hamburger/hamburger';
 
 
 /* ======  Macro Modules ====== */
@@ -32,8 +34,11 @@
 // Something can be considered "macro" if, by definition, it is composed of multiple, or "sub" elements
 
 @import 'modules/macro/figure/figure';
+@import 'modules/macro/hero/hero';
 @import 'modules/macro/nav-primary/nav-primary';
 @import 'modules/macro/portlet/portlet';
+@import 'modules/macro/tiles/tiles';
+@import 'modules/macro/utility-nav/utility-nav';
 
 
 /* ======  Utilities ====== */

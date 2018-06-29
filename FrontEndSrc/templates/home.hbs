@@ -7,12 +7,14 @@ sitelinks-searchbox: true
 {{#extend "default"}}
     {{#content "body"}}
 
-<!-- YAPL
-name: Home Page
-notes: The landing page for the site.
--->
+    <!-- YAPL
+    name: Home Page
+    notes: The landing page for the site.
+    -->
 
-    HOME CONTENT
+    {{> hero hero.homepage }}
+
+    {{> tiles tiles.homepage }}
 
     {{/content}}
 {{/extend}}

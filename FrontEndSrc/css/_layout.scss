@@ -1,3 +1,18 @@
-/* ======  Base Layout Styles ====== */
+@import 'variables';
+@import 'mixins';
 
-// .l-contain {}
+@mixin l-contain {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: $contain-max-width;
+    width: $contain-inner-width;
+}
+
+// generic vertical spacing classes
+@for $i from 0 to 8 {
+    @include mtpt-rules($i, 'l-');
+}
+
+.l-contain {
+    @include l-contain;
+}

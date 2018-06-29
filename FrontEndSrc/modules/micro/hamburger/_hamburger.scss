@@ -1,0 +1,34 @@
+.hamburger {
+    cursor: pointer;
+    display: block;
+}
+
+.hamburger__line {
+    stroke: $teal-1;
+    stroke-miterlimit: 10;
+    stroke-width: 3px;
+    transition: stroke .25s, transform .25s;
+    will-change: stroke, background;
+
+    &:nth-child(1) {
+        transform-origin: top right;
+    }
+
+    &:nth-child(3) {
+        transform-origin: bottom right;
+    }
+
+    .is-menu-open & {
+        &:nth-child(1) {
+            transform: rotate(-45deg);
+        }
+
+        &:nth-child(2) {
+            stroke: transparent;
+        }
+
+        &:nth-child(3) {
+            transform: rotate(45deg);
+        }
+    }
+}

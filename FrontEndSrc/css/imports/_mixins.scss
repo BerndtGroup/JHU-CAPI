@@ -1,3 +1,122 @@
-/* ======  Sass Mixins ====== */
+@import 'variables';
+@import 'media-queries';
 
+@mixin mb-half {
+    margin-bottom: $vertical-gutter * .5;
+}
 
+@mixin mb($increment, $gutter: $vertical-gutter) {
+    margin-bottom: round($gutter * $increment);
+}
+
+@mixin pb-half {
+    padding-bottom: $vertical-gutter * .5;
+}
+
+@mixin pb($increment, $gutter: $vertical-gutter) {
+    padding-bottom: round($gutter * $increment);
+}
+
+@mixin mt-half {
+    margin-top: $vertical-gutter * .5;
+}
+
+@mixin mt($increment, $gutter: $vertical-gutter) {
+    margin-top: round($gutter * $increment);
+}
+
+@mixin pt-half {
+    padding-top: $vertical-gutter * .5;
+}
+
+@mixin pt($increment, $gutter: $vertical-gutter) {
+    padding-top: round($gutter * $increment);
+}
+
+@mixin mtpt-rules($increment, $prefix: '') {
+    .#{$prefix}mb-#{$increment} {
+        @include mb($increment);
+    }
+
+    .#{$prefix}pb-#{$increment} {
+        @include pb($increment);
+    }
+
+    .#{$prefix}mt-#{$increment} {
+        @include mt($increment);
+    }
+
+    .#{$prefix}pt-#{$increment} {
+        @include pt($increment);
+    }
+
+    @include small-only {
+        .#{$prefix}mb-#{$increment}-mq-sm {
+            @include mb($increment);
+        }
+
+        .#{$prefix}pb-#{$increment}-mq-sm {
+            @include pb($increment);
+        }
+
+        .#{$prefix}mt-#{$increment}-mq-sm {
+            @include mt($increment);
+        }
+
+        .#{$prefix}pt-#{$increment}-mq-sm {
+            @include pt($increment);
+        }
+    }
+
+    @include medium-only {
+        .#{$prefix}mb-#{$increment}-mq-med {
+            @include mb($increment);
+        }
+
+        .#{$prefix}pb-#{$increment}-mq-med {
+            @include pb($increment);
+        }
+
+        .#{$prefix}mt-#{$increment}-mq-med {
+            @include mt($increment);
+        }
+
+        .#{$prefix}pt-#{$increment}-mq-med {
+            @include pt($increment);
+        }
+    }
+
+    @include large-and-above {
+        .#{$prefix}mb-#{$increment}-mq-lg {
+            @include mb($increment);
+        }
+
+        .#{$prefix}pb-#{$increment}-mq-lg {
+            @include pb($increment);
+        }
+
+        .#{$prefix}mt-#{$increment}-mq-lg {
+            @include mt($increment);
+        }
+
+        .#{$prefix}pt-#{$increment}-mq-lg {
+            @include pt($increment);
+        }
+    }
+}
+
+@mixin fs-lh($fs) {
+    @if map-has-key($font-sizes-line-heights, $fs) {
+        font-size: nth(map-get($font-sizes-line-heights, $fs), 1);
+        line-height: nth(map-get($font-sizes-line-heights, $fs), 2);
+    }
+}
+
+@function strip-unit($num) {
+    @return $num / ($num * 0 + 1);
+}
+
+@function rem-calc($size) {
+    $rem-size: $size / strip-unit($global-base-font-size);
+    @return #{$rem-size}rem;
+}

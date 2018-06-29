@@ -16,3 +16,18 @@ context: btn.default
         text-decoration: none;
     }
 }
+
+.btn--hollow {
+    border: 1px solid rgba($white, .5);
+    border-radius: 5px;
+    color: $white;
+    display: inline-block;
+    padding: rem-calc(10) rem-calc(16) rem-calc(8);
+
+    &:hover,
+    &:focus {
+        background-color: $white;
+        border-color: $white;
+        color: $blue-1;
+    }
+}

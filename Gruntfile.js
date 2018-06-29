@@ -61,15 +61,15 @@ module.exports = function (grunt) {
             options: {
                 port: 9000,
                 // change this to 'localhost' to prevent accessing the server from outside
-                hostname: '0.0.0.0'
+                hostname: '0.0.0.0',
             },
             livereload: {
                 options: {
                     middleware: function (connect) {
                         return [
+                            lrSnippet,
                             mountFolder(connect, '.tmp'),
-                            mountFolder(connect, config.app),
-                            lrSnippet
+                            mountFolder(connect, config.app)
                         ];
                     }
                 }

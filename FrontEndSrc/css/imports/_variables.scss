@@ -2,44 +2,107 @@
 
 // Define global variables here in css-case (hyphenated). Module-specific variables go with individual module files.
 
-
-
 // Colors
-$black: #000;
-$link-blue: #006cd8;
+$black: #252525;
 $selection-blue: #b3d4fc;
+$white: #fff;
+$yellow: #fbb040;
+$yellow-light: lighten($yellow, 10%);
+$yellow-alt: #f4b942;
+$orange: #f08f25;
+$red: #6d1422;
+$red-pure: #f00;
+$blue-light: #6babd7;
+$lightred: rgba(159, 94, 38, .25);
+$teal: #007886;
 
+//Text Color
+$t-white: rgba(255, 255, 255, .9);
+$t-dark-gray: #444;
+$t-gray: #666;
+$t-med-gray: #aaa;
+$t-light-gray: #888;
+$t-very-light-gray: #4c4e4a;
+$t-flyout-gray: #464b46;
+$t-black: rgba(0, 0, 0, .84);
+$t-black-half: rgba(0, 0, 0, .5);
+$t-black-quarter: rgba(0, 0, 0, .25);
+$t-black-tenth: rgba(0, 0, 0, .1);
+$t-burgundy: #6c1321;
+$t-red-error: #b00;
+$t-disclosures: #717171;
 
-// Type
-$arial: Arial, sans-serif;
+// CAPI colors
+$blue-1: #3a5166;
+$teal-1: #2ab798;
+$gray-1: #e2e2e2;
+$gray-2: #666;
 
+// Font sizes by size/name
+$font-sizes-line-heights: (
+  13: (0.8125rem, 1.125rem),
+  14: (0.875rem, 1.25rem),
+  16: (1rem, 1.5rem), //body copy mobile
+  17: (1.0625rem, 1.75rem),
+  18: (1.125rem, 1.75rem), //body copy desktop (update lh)
+  20: (1.25rem, 1.75rem),
+  21: (1.3125rem, 1.3125rem),
+  22: (1.375rem, 1.625rem),
+  23: (1.4375rem, 2.125rem),
+  24: (1.5rem, 1.75rem),
+  26: (1.625rem, 2.25rem),
+  27: (1.6875rem, 2.25rem), //h4 desktop
+  28: (1.75rem, 2.375rem), //h3 desktop
+  29: (1.8125rem, 2.5625rem), //
+  30: (1.875rem, 2.125rem),
+  36: (2.25rem, 2.875rem), // ms -h1 (small)
+  41: (2.5625rem, 2.75rem), // H2 desktop
+  42: (2.625rem, 3rem),
+  45: (2.8125rem, 3.125rem),
+  55: (3.4375rem, 4.0625rem), // H1 desktop
+);
+
+$global-base-font-size: 16px;
+$proxima: 'proxima-nova', sans-serif;
+$brandon: 'brandon-grotesque', sans-serif;
+
+$weight-regular: 400;
+$weight-medium: 500;
+$weight-semibold: 600;
+$weight-bold: 700;
 
 // Base width/padding for different screen sizes
-$mobile-side-pad: 4%;
-$tablet-side-pad: 20px;
-$desktop-inner-width: 96%;
-$desktop-max-width: 1215px;
+$contain-inner-width: 90%;
+$contain-max-width: 1300px;
+
+
+// Animations
+$std-transition-time: 400ms;
+
+
+// Layout variables
+$vertical-gutter: 1rem;
+$grid-gutter: 3%;
 
 
 // Z-Index Scale
-$z-index-1: 100;
-$z-index-2: 200;
-$z-index-3: 300;
-$z-index-4: 400;
-$z-index-5: 500;
-$z-index-6: 600;
-$z-index-7: 700;
-$z-index-8: 800;
-$z-index-9: 900;
-$z-index-10: 1000;
-
+$z-index-1: 1;
+$z-index-2: 2;
+$z-index-3: 3;
+$z-index-4: 4;
+$z-index-5: 5;
+$z-index-6: 6;
+$z-index-7: 7;
+$z-index-8: 8;
+$z-index-9: 9;
+$z-index-10: 10;
 
 // Z-index- Applications
-$z-index-header: $z-index-1;
-
-$z-index-primary-nav: $z-index-2;
-$z-index-utility-nav: $z-index-2;
-
-$z-index-logo: $z-index-3;
-
-$z-index-modal: $z-index-4;
+$z-index-primary-nav-flyout-caret: $z-index-8;
+$z-index-closest-branch-flyout: $z-index-7;
+$z-index-primary-nav-flyout: $z-index-6;
+$z-index-ms-title: $z-index-2;
+$z-index-hp-rates-title: $z-index-2;
+$z-index-hp-hero: $z-index-1;
+$z-index-temp: $z-index-1;
+$z-index-live-chat: $z-index-1;
