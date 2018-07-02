@@ -33,8 +33,8 @@
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
+        <link rel="stylesheet" href="https://use.typekit.net/vzb0ccr.css">
         <link rel="stylesheet" href="./css/main.css">
-        
         
         <!--
             *** Only show this "potentialAction" section on the HOME / INDEX of the site, and change markup to match the site: ***
@@ -79,30 +79,169 @@
     <body>
 
         
-        <header class="l-header">
-        
-            <div class="nav-wrap js-nav-wrap">
-                <div class="l-contain">
-                    
-                    <nav class="nav-primary"></nav>        </div>
+        <header class="l-header js-header">
+            <div class="l-header__inner">
+                <a href="./index.html" class="header__logo">Radar Resource Center</a>
+                <div class="header__mobile-toggle u-hidden-mq-medium u-hidden-mq-large">
+                    <!-- start hamburger -->
+                    <a href="#" class="hamburger js-hamburger">
+                        <svg class="hamburger__lines" width="25" height="20" viewBox="0 0 25 20">
+                            <line class="hamburger__line" y1="1" x2="25" y2="1"></line>
+                            <line class="hamburger__line" y1="10" x2="25" y2="10"></line>
+                            <line class="hamburger__line" y1="19" x2="25" y2="19"></line>
+                        </svg>
+                    </a>
+                    <!-- end hamburger -->
+                    <span class="u-hidden" aria-hidden="true">Toggle Mobile Menu</span>
+                </div>
+                <div class="nav-wrap js-nav-wrap">
+                    <div class="l-utility-nav">
+                        <nav class="utility-nav">
+                            <ul class="utility-nav__items">
+                                <li class="utility-nav__item"><a href="#" class="btn btn--hollow">Additional Resources</a></li>
+                                <li class="utility-nav__item"><a href="#" class="btn btn--hollow">Contributors</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="l-nav-primary">
+                        
+                        <nav class="nav-primary js-nav-primary">
+                            <ul class="nav-primary__l1-items">
+                                <li class="nav-primary__l1-item nav-primary__l1-item--has-dropdown js-nav-primary-l1"><a href="#" class="nav-primary__l1-item-link"><span class="nav-primary__link-text">How-To-Guides</span></a>
+                                    <ul class="nav-primary__l2-items">
+                                        <li class="nav-primary__l2-item"><a href="#" class="nav-primary__l2-item-link"><span class="nav-primary__link-text">Overview of Your ODK System</span></a></li>
+                                        <li class="nav-primary__l2-item"><a href="#" class="nav-primary__l2-item-link"><span class="nav-primary__link-text">Creating an XLS Form Questionnaire</span></a></li>
+                                        <li class="nav-primary__l2-item"><a href="#" class="nav-primary__l2-item-link"><span class="nav-primary__link-text">Deploying a Remote Server…</span></a></li>
+                                        <li class="nav-primary__l2-item"><a href="#" class="nav-primary__l2-item-link"><span class="nav-primary__link-text">The Handheld Device</span></a></li>
+                                        <li class="nav-primary__l2-item"><a href="#" class="nav-primary__l2-item-link"><span class="nav-primary__link-text">Downloading and Merging Data…</span></a></li>
+                                        <li class="nav-primary__l2-item"><a href="#" class="nav-primary__l2-item-link"><span class="nav-primary__link-text">Monitoring Incoming Survey Data</span></a></li>
+                                        <li class="nav-primary__l2-item"><a href="#" class="nav-primary__l2-item-link"><span class="nav-primary__link-text">Best Practices</span></a></li>
+                                        <li class="nav-primary__l2-item"><a href="#" class="nav-primary__l2-item-link"><span class="nav-primary__link-text">Tablet Handling Guidelines</span></a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-primary__l1-item"><a href="#" class="nav-primary__l1-item-link"><span class="nav-primary__link-text">Questionnaires</span></a></li>
+                                <li class="nav-primary__l1-item"><a href="#" class="nav-primary__l1-item-link"><span class="nav-primary__link-text">Dash Report</span></a></li>
+                                <li class="nav-primary__l1-item"><a href="#" class="nav-primary__l1-item-link"><span class="nav-primary__link-text">Menu Item</span></a></li>
+                                <li class="nav-primary__l1-item"><a href="#" class="nav-primary__l1-item-link"><span class="nav-primary__link-text">Menu Item</span></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
             </div>
-        
         </header>
 
         <div class="l-content-wrap u-cf">
             
-<!-- YAPL
-name: Home Page
-notes: The landing page for the site.
--->
+    <!-- YAPL
+    name: Home Page
+    notes: The landing page for the site.
+    -->
 
-    HOME CONTENT
+    <div class="hero hero--home" style="background-image: url('./images/temp/hp-hero.jpg')">
+        <div class="hero__text-box l-contain">
+            <h2 class="hero__title">Resources for the Data Collection Community</h2>
+            <p class="hero__subtitle">The Global Health Community uses surveys to conduct health reserach in low- and middle-income countries. This website collates freely available data collection resources, and reccomendations that have come out of our experiences.</p>
+        </div>
+        <div class="hero__color-overlay"></div>
+    </div>
+
+    <div class="l-tiles js-tiles">
+        <div class="tiles__inner l-contain">
+            <div class="tile tile--inner js-tile" tabindex="0">
+                <div class="tile__content">
+                    <div class="tile__icon-container">
+                        <img class="tile__icon" src="./images/assets/icon/book--teal.svg" alt="">
+                    </div>
+                    <h3 class="tile__title">How-To-Guides</h3>
+                    <div class="tile__inner"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</p> <a href="#" class="btn btn--hollow">View Guides</a>
+    </div>
+                </div>
+            </div>
+            <div class="tile tile--inner js-tile" tabindex="0">
+                <div class="tile__content">
+                    <div class="tile__icon-container">
+                        <img class="tile__icon" src="./images/assets/icon/notes--teal.svg" alt="">
+                    </div>
+                    <h3 class="tile__title">Questionnaires</h3>
+                    <div class="tile__inner"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</p> <a href="#" class="btn btn--hollow">View Questionnaires</a>
+    </div>
+                </div>
+            </div>
+            <div class="tile tile--inner js-tile" tabindex="0">
+                <div class="tile__content">
+                    <div class="tile__icon-container">
+                        <img class="tile__icon" src="./images/assets/icon/graphs--teal.svg" alt="">
+                    </div>
+                    <h3 class="tile__title">Dash Reports</h3>
+                    <div class="tile__inner"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</p> <a href="#" class="btn btn--hollow">View Reports</a>
+    </div>
+                </div>
+            </div>
+            <div class="tile tile--inner js-tile" tabindex="0">
+                <div class="tile__content">
+                    <div class="tile__icon-container">
+                        <img class="tile__icon" src="./images/assets/icon/layers--teal.svg" alt="">
+                    </div>
+                    <h3 class="tile__title">Nav Item 4</h3>
+                    <div class="tile__inner"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</p> <a href="#" class="btn btn--hollow">View Item</a>
+    </div>
+                </div>
+            </div>
+            <div class="tile tile--inner js-tile" tabindex="0">
+                <div class="tile__content">
+                    <div class="tile__icon-container">
+                        <img class="tile__icon" src="./images/assets/icon/folder--teal.svg" alt="">
+                    </div>
+                    <h3 class="tile__title">Additional Resources</h3>
+                    <div class="tile__inner"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</p> <a href="#" class="btn btn--hollow">View Resources</a>
+    </div>
+                </div>
+            </div>
+            <div class="tile tile--inner js-tile" tabindex="0">
+                <div class="tile__content">
+                    <div class="tile__icon-container">
+                        <img class="tile__icon" src="./images/assets/icon/question--teal.svg" alt="">
+                    </div>
+                    <h3 class="tile__title">Questions? Contact us</h3>
+                    <div class="tile__inner"><a href="mailto:emailaddress@jhu.edu" class="icon-link icon-link--email icon-link--before">emailaddress@jhu.edu</a> <a href="410-955-3543" class="icon-link icon-link--phone icon-link--before">410-955-3543</a>
+    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="l-feature-image background--teal">
+        <div class="feature-image__container l-contain">
+            <div class="feature-image__image-container">
+                <img class="feature-image__image" src="./images/temp/hp-feature.jpg" alt="image alt text">
+            </div>
+            <div class="feature-image__text">
+                <h3 class="feature-image__title">Why a Resource Center?</h3>
+                <p class="feature-image__caption">Some of the tools we use, such as ODK, can be found elsewhere and this website refers you to their original sources. Other tools, such as the questionnaires, extend existing tools and can be downloaded, replicated, edited, or further adapted. Finally, tools such as the Questionnaire Compiler and Dash Report have been created by Johns Hopkins School of Public Health to fill particular needs in the data collection pipeline: to create surveys more easily, and to monitor survey data quality.</p>
+                <a href="#" class="btn btn--teal">Meet the Contributors</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="l-sponsor-info background--gray">
+        <div class="sponsor-info__images l-contain">
+            <img class="sponsor-info__image" src="./images/assets/logos/bloomberg-logo.png" alt="Johns Hopkins Bloomberg School of Public Health Logo">
+            <img class="sponsor-info__image" src="./images/assets/logos/radar-logo.png" alt="JHU RADAR Logo">
+        </div>
+    </div>
 
 
         </div><!-- .l-content-wrap -->
 
         
-        <footer class="l-footer"></footer>
+        <footer class="l-footer background--gray-3">
+            <div class="footer__links l-contain">
+                <a href="#" class="icon-link icon-link--before icon-link--gray icon-link--email">emailaddress@jhu.edu</a>
+                <a href="#" class="icon-link icon-link--before icon-link--gray icon-link--phone">410-955-3543</a>
+                <a href="#" class="icon-link icon-link--before icon-link--gray icon-link--location">615 N. Wolfe Street<br>Baltimore, MD 21205</a>
+            </div>
+        </footer>
+
         <script src="./js/main.js" async defer></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be site's ID. -->
