@@ -4,7 +4,7 @@
     transition-property: margin, max-height;
 
     @include small-only {
-        padding: .5rem 2rem;
+        padding: 0 2rem;
     }
 
     @include medium-and-above {
@@ -38,7 +38,7 @@
         @include small-only {
             color: $gray-2;
             display: block;
-            padding-bottom: 1rem;
+            padding: 1rem;
             text-align: center;
             text-transform: capitalize;
             width: 100%;

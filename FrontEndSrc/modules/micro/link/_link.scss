@@ -28,10 +28,41 @@
     }
 }
 
-.icon-link--email::before {
-    background-image: url('/images/assets/icon/envelope--teal.svg');
+.icon-link--email {
+    &::before {
+        background-image: url('/images/assets/icon/envelope--teal.svg');
+    }
+
+    &.icon-link--gray {
+        &::before {
+            background-image: url('/images/assets/icon/envelope--gray.svg');
+
+        }
+    }
 }
 
-.icon-link--phone::before {
-    background-image: url('/images/assets/icon/phone--teal.svg');
+.icon-link--phone {
+    &::before {
+        background-image: url('/images/assets/icon/phone--teal.svg');
+    }
+
+    &.icon-link--gray {
+        &::before {
+            background-image: url('/images/assets/icon/phone--gray.svg');
+
+        }
+    }
+}
+
+.icon-link--location {
+    &::before {
+        background-image: url('/images/assets/icon/location--teal.svg');
+    }
+
+    &.icon-link--gray {
+        &::before {
+            background-image: url('/images/assets/icon/location--gray.svg');
+
+        }
+    }
 }

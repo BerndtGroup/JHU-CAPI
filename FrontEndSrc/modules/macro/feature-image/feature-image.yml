@@ -1,0 +1,6 @@
+homepage:
+  image: temp/hp-feature.jpg
+  altImage: image alt text
+  title: Why a Resource Center?
+  text: 'Some of the tools we use, such as ODK, can be found elsewhere and this website refers you to their original sources. Other tools, such as the questionnaires, extend existing tools and can be downloaded, replicated, edited, or further adapted. Finally, tools such as the Questionnaire Compiler and Dash Report have been created by Johns Hopkins School of Public Health to fill particular needs in the data collection pipeline: to create surveys more easily, and to monitor survey data quality.'
+  cta: Meet the Contributors

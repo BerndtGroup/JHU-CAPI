@@ -20,7 +20,7 @@ export default function() {
             if ($wrap) {
                 $ui = {
                     mobileToggle: $wrap.find('.js-hamburger'),
-                    primaryNavl1: $wrap.find('.js-nav-primary-l1')
+                    primaryNavL1: $wrap.find('.js-nav-primary-l1')
                 };
 
                 _self.bindUIActions();
@@ -30,16 +30,16 @@ export default function() {
 
         bindUIActions: function() {
             $ui.mobileToggle.on('click', _self.events.toggleMobileMenu)
-            $ui.primaryNavl1.on('click', _self.events.toggleMobileNavItem)
+            $ui.primaryNavL1.on('click', _self.events.toggleMobileSubmenu)
         },
 
         events: {
             toggleMobileMenu: function() {
-                $wrap.toggleClass('menu-is-open')
+                $wrap.toggleClass('is-menu-open')
             },
 
-            toggleMobileNavItem: function(e) {
-                $(e.target).closest('.js-nav-primary-l1').toggleClass('menu-is-open')
+            toggleMobileSubmenu: function(e) {
+                $(e.target).closest('.js-nav-primary-l1').toggleClass('is-menu-open')
             }
         },
 

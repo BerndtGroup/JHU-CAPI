@@ -74,7 +74,7 @@
         }
 
         @include small-only {
-            &.menu-is-open {
+            &.is-menu-open {
                 .nav-primary__l1-item-link {
                     &::after {
                         transform: rotateZ(180deg);
@@ -156,8 +156,8 @@
         overflow: hidden;
         transition: max-height .5s ease;
 
-        .js-nav-primary-l1.menu-is-open & {
-            max-height: rem-calc(500);
+        .js-nav-primary-l1.is-menu-open & {
+            max-height: rem-calc(350);
         }
     }
 
@@ -204,10 +204,12 @@
             font-size: rem-calc(12);
         }
 
-        &:hover,
-        &:focus {
-            background-color: $teal-1;
-            color: $white;
+        @include medium-and-above {
+            &:hover,
+            &:focus {
+                background-color: $teal-1;
+                color: $white;
+            }
         }
     }
 }

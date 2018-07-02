@@ -1,3 +1,40 @@
 /* ======  Footer Styles ====== */
 
-// .l-footer {}
+.l-footer {
+    padding: 2rem 0 4rem;
+}
+
+.footer__links {
+    display: flex;
+
+    @include small-only {
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 0 auto;
+        width: rem-calc(210);
+    }
+
+    @include medium-and-above {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .icon-link {
+        color: $white;
+        margin-top: 2rem;
+
+        &:hover,
+        &:focus {
+            color: $teal-1;
+        }
+
+        @include medium-only {
+            &:nth-child(2) {
+                margin-left: 2rem;
+                margin-right: 2rem;
+            }
+        }
+    }
+}

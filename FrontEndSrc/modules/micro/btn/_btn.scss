@@ -8,12 +8,25 @@ context: btn.default
 */
 
 .btn {
+    border-radius: rem-calc(5);
     cursor: pointer;
     display: inline-block;
     line-height: 1;
+    padding: rem-calc(8) rem-calc(20);
 
     &:hover {
         text-decoration: none;
+    }
+
+}
+
+.btn--teal {
+    background-color: $teal-1;
+    color: $white;
+
+    &:hover,
+    &:focus {
+        background-color: $blue-1;
     }
 }
 

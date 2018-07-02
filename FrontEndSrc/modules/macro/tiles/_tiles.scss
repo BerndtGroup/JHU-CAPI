@@ -1,16 +1,21 @@
 .l-tiles {
     margin-top: 3rem;
+    position: relative;
+    z-index: 3;
 }
 
 .tiles__inner {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    @include small-only {
+        max-width: rem-calc(400);
+    }
 }
 
 .tile {
     color: $white;
-    position: relative;
     text-align: center;
     text-decoration: none;
 
@@ -71,27 +76,15 @@
             .tile__content {
                 box-shadow: 0 0 rem-calc(50) rgba($black, .45);
                 padding-top: 1.75rem;
-                transform: translateY(-80px);
+                transform: translateY(-60px);
             }
 
             .tile__inner {
                 margin-top: .35rem;
-                max-height: rem-calc(150);
+                max-height: rem-calc(200);
                 opacity: 1;
                 padding-top: .5rem;
             }
-        }
-    }
-}
-
-.tile--inner {
-    @include medium-and-above {
-        position: relative;
-
-        .tile__content {
-            bottom: 0;
-            position: absolute;
-            width: 100%;
         }
     }
 }
@@ -103,12 +96,15 @@
     box-shadow: none;
     display: flex;
     flex-direction: column;
-    height: 360px;
-    padding: 3rem;
-    padding-bottom: 1.5rem;
+    padding: 1.5rem 1rem;
     transition: .5s ease;
     transition-property: box-shadow, transform, padding;
-    z-index: 2;
+
+    @include medium-and-above {
+        height: rem-calc(375);
+        padding: 1.5rem;
+        padding-top: 2.5rem;
+    }
 }
 
 .tile__icon-container {
@@ -116,11 +112,22 @@
     background-color: $white;
     border-radius: 50%;
     display: flex;
+    flex-shrink: 0;
     justify-content: center;
     padding: 1.5rem;
     transition: .4s ease;
     transition-property: width, height;
     will-change: width, height;
+
+    @include small-only {
+        height: rem-calc(71);
+        width: rem-calc(71);
+
+        img {
+            max-height: rem-calc(38);
+            max-width: rem-calc(38);
+        }
+    }
 
     @include medium-and-above {
         height: rem-calc(178);
@@ -152,7 +159,7 @@
     font-family: $brandon;
     font-size: rem-calc(24);
     font-weight: $weight-bold;
-    margin-top: 2rem;
+    margin-top: 1rem;
     padding-bottom: 1rem;
     position: relative;
 
@@ -166,6 +173,10 @@
         top: 100%;
         width: rem-calc(40);
     }
+
+    @include medium-and-above {
+        margin-top: 2rem;
+    }
 }
 
 .tile .icon-link {
@@ -178,5 +189,16 @@
     &:hover,
     &:focus {
         color: $teal-1;
+    }
+}
+
+.tile__inner {
+    @include small-only {
+        margin-top: .35rem;
+        padding-top: .5rem;
+
+        .btn {
+            margin-top: 1rem;
+        }
     }
 }

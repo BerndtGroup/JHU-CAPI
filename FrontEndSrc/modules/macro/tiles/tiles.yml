@@ -5,15 +5,26 @@ homepage:
       inner: >
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</p>
         <a href="#" class="btn btn--hollow">View Guides</a>
-        <div class="tile__inner-border"></div>
     - icon: 'assets/icon/notes--teal.svg'
       title: Questionnaires
+      inner: >
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</p>
+        <a href="#" class="btn btn--hollow">View Questionnaires</a>
     - icon: 'assets/icon/graphs--teal.svg'
       title: Dash Reports
+      inner: >
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</p>
+        <a href="#" class="btn btn--hollow">View Reports</a>
     - icon: 'assets/icon/layers--teal.svg'
       title: Nav Item 4
+      inner: >
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</p>
+        <a href="#" class="btn btn--hollow">View Item</a>
     - icon: 'assets/icon/folder--teal.svg'
       title: Additional Resources
+      inner: >
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</p>
+        <a href="#" class="btn btn--hollow">View Resources</a>
     - icon: 'assets/icon/question--teal.svg'
       title: Questions? Contact us
       inner: >

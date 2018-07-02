@@ -14,7 +14,7 @@
     @include small-only {
         box-shadow: 0 0 rem-calc(30) rgba($black, .3);
 
-        &.menu-is-open {
+        &.is-menu-open {
             border-radius: 0 0 9px 9px;
         }
     }
@@ -30,7 +30,7 @@
 
         &.is-collapsed {
             height: 140px;
-            padding: 1.25rem;
+            padding: 1.25rem 0;
 
             .l-header__inner {
                 align-items: center;
@@ -80,20 +80,25 @@
     margin-bottom: 1rem;
     margin-right: 1rem;
     max-width: rem-calc(125);
-    padding-left: 1rem;
     text-transform: uppercase;
     transition: .5s ease;
-    transition-property: font-size, margin;
+    transition-property: font-size, margin, color;
 
     @include small-only {
         color: $black;
         font-size: rem-calc(16);
         margin-bottom: 1rem;
         max-width: rem-calc(160);
+        padding-left: 1rem;
     }
 
     @include medium-and-above {
         color: $white;
+
+        &:hover,
+        &:focus {
+            color: $teal-1;
+        }
     }
 }
 
@@ -106,8 +111,8 @@
         transition: max-height .5s ease;
         width: 100%;
 
-        .menu-is-open & {
-            max-height: rem-calc(600);
+        .is-menu-open & {
+            max-height: rem-calc(645);
         }
     }
 

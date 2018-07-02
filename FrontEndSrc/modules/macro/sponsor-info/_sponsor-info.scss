@@ -1,0 +1,32 @@
+.sponsor-info__images {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem 2rem;
+
+    @include medium-and-above {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    @include large-and-above {
+        padding: 3rem 4rem;
+    }
+}
+
+.sponsor-info__image {
+    max-width: rem-calc(200);
+    mix-blend-mode: multiply;
+
+    @include small-only {
+        &:first-child {
+            margin-bottom: 2rem;
+        }
+    }
+
+    @include large-and-above {
+        max-height: rem-calc(150);
+        max-width: rem-calc(315);
+    }
+}
