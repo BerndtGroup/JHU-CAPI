@@ -193,6 +193,8 @@
 }
 
 .tile__inner {
+    width: 100%;
+
     @include small-only {
         margin-top: .35rem;
         padding-top: .5rem;

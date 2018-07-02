@@ -32,15 +32,15 @@ export default function() {
 
         events: {
             tileHover: function(e) {
-                $(e.target.closest('.js-tile')).toggleClass('is-open')
+                $($(e.target).closest('.js-tile')).toggleClass('is-open')
             },
 
             tileOpen: function(e) {
-                $(e.target.closest('.js-tile')).addClass('is-open')
+                $($(e.target).closest('.js-tile')).addClass('is-open')
             },
 
             tileClose: function(e) {
-                $(e.target.closest('.js-tile')).removeClass('is-open')
+                $($(e.target).closest('.js-tile')).removeClass('is-open')
             },
         }
     }

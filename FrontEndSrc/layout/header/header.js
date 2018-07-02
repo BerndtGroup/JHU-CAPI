@@ -34,11 +34,14 @@ export default function() {
         },
 
         events: {
-            toggleMobileMenu: function() {
+            toggleMobileMenu: function(e) {
+                e.preventDefault()
                 $wrap.toggleClass('is-menu-open')
+                $ui.primaryNavL1.removeClass('is-menu-open')
             },
 
             toggleMobileSubmenu: function(e) {
+                e.preventDefault()
                 $(e.target).closest('.js-nav-primary-l1').toggleClass('is-menu-open')
             }
         },
@@ -54,9 +57,8 @@ export default function() {
                     }
                 },
                 {
-                    at: document.body,
+                    inside: document.body,
                     direction: 'up',
-                    length: 200,
                     fn: function() {
                         $wrap.removeClass('is-collapsed')
                     }
