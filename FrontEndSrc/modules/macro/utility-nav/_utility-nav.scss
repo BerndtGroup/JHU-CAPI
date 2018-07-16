@@ -3,11 +3,11 @@
     transition: .5s ease;
     transition-property: margin, max-height;
 
-    @include small-only {
+    @include medium-and-below {
         padding: 0 2rem;
     }
 
-    @include medium-and-above {
+    @include large-and-above {
         display: flex;
         justify-content: flex-end;
         margin-bottom: 1.5rem;
@@ -19,13 +19,13 @@
         font-weight: $weight-medium;
         text-transform: uppercase;
 
-        @include small-only {
+        @include medium-and-below {
             &:first-child {
                 border-bottom: 1px solid $gray-2;
             }
         }
 
-        @include medium-and-above {
+        @include large-and-above {
             display: inline-block;
 
             &:first-child {
@@ -35,7 +35,10 @@
     }
 
     .btn {
-        @include small-only {
+        font-weight: $weight-medium;
+        letter-spacing: .01rem;
+
+        @include medium-and-below {
             color: $gray-2;
             display: block;
             padding: 1rem;
@@ -45,7 +48,7 @@
         }
     }
 
-    @include medium-and-above {
+    @include large-and-above {
         .l-header.is-collapsed & {
             margin: 0;
             max-height: 0;

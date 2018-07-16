@@ -31,6 +31,8 @@ textarea {
 }
 
 ::selection {
+    background-color: $blue-1;
+    color: $white;
     text-shadow: none;
 }
 

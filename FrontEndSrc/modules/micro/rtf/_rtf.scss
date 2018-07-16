@@ -12,15 +12,21 @@ body {
 
 %a {
     cursor: pointer;
+    color: $teal-1;
 
-    &:hover {
-
+    &:hover,
+    &:focus {
+        color: $blue-1;
     }
 }
 
 .a,
-.rtf a {
+.rtf a:not(.btn) {
     @extend %a;
+}
+
+.rtf {
+    margin-top: 4rem;
 }
 
 
@@ -28,6 +34,7 @@ body {
 
 .rtf figure,
 .figure {
+    margin-bottom: 1rem;
 
     figcaption {
     }
@@ -47,17 +54,28 @@ body {
 
 .h1,
 .rtf h1 {
+    font-size: rem-calc(32);
 
+    &::after {
+        width: rem-calc(80);
+    }
 }
 
 .h2,
 .rtf h2 {
+    font-size: rem-calc(24);
+
+    &::after {
+        width: rem-calc(40);
+    }
 
 }
 
 .h3,
 .rtf h3 {
-
+    &::after {
+        width: rem-calc(40);
+    }
 }
 
 .h4,
@@ -70,20 +88,120 @@ body {
 
 }
 
+.rtf {
+    h1,
+    h2,
+    h3 {
+        display: inline-block;
+        font-family: $brandon;
+        font-weight: $weight-bold;
+        margin-bottom: .75rem;
+        margin-top: 3rem;
+        padding-bottom: .75rem;
+        position: relative;
+
+        &::after {
+            background-color: $teal-1;
+            bottom: 0;
+            content: '';
+            display: block;
+            height: rem-calc(2);
+            left: 0;
+            position: absolute;
+        }
+    }
+
+    .figure + h1,
+    .figure + h2,
+    .figure + h3 {
+        margin-top: 0;
+    }
+}
+
 
 
 // Body Copy Style
 
 .p,
 .rtf p {
-
+    margin-bottom: 1rem;
 }
 
 .ul,
 .rtf ul,
 .ol,
 .rtf ol {
-    margin-bottom: .5em;
+    margin-left: 2rem;
+
+    li {
+        line-height: 1.6;
+        margin: 1rem 0;
+    }
+}
+
+.ul,
+.rtf ul {
+    li {
+        &::before {
+            background-color: $black;
+            border-radius: 50%;
+            content: '';
+            display: inline-block;
+            height: rem-calc(5);
+            margin-right: .5rem;
+            position: relative;
+            top: rem-calc(-3);
+            width: rem-calc(5);
+        }
+
+        ul > li {
+            padding-left: .75rem;
+            position: relative;
+
+            &::before {
+                background-color: transparent;
+                border-radius: 0;
+                content: '-';
+                font-size: 1.2em;
+                font-weight: $weight-semibold;
+                left: 0;
+                position: absolute;
+            }
+        }
+    }
+}
+
+.ol,
+.rtf ol {
+    counter-reset: rtf-ol;
+    list-style-type: none;
+
+    > li {
+        counter-increment: rtf-ol;
+        padding-left: rem-calc(18);
+        position: relative;
+
+        &::before {
+            content: counter(rtf-ol) '.';
+            left: 0;
+            list-style-type: decimal;
+            position: absolute;
+            top: 0;
+        }
+
+        > ol {
+            counter-reset: rtf-ol;
+
+            > li {
+                counter-increment: rtf-ol;
+
+                &::before {
+                    content: counter(rtf-ol, lower-alpha) '.';
+                    list-style-type: lower-alpha;
+                }
+            }
+        }
+    }
 }
 
 

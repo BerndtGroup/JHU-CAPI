@@ -3,12 +3,23 @@ layout: default.hbs
 cols: 1
 ---
 
+{{#extend "default"}}
 
-<div class="l-1-col-master u-cf">
+    {{#content "body"}}
 
-    <!-- Primary content container -->
-    <main class="l-content-primary">
-        {{#block "content-primary"}}{{/block}}
-    </main><!-- .content-primary -->
+    <!-- notes:component
+    title: Main Image
+    general: This image can be generic (like a photo of a chester county farm) or specific to the page content. It will be used at the thumbnail (if needed for future portlets or content types) of the page if the page is not specifically assigned another thumbnail.
+    -->
+    <div class="l-1-col-master u-cf">
 
-</div><!-- .l-1-col-master -->
+        <!-- Primary content container -->
+        <main class="l-content-primary">
+            {{#block "content-primary"}}{{/block}}
+        </main><!-- .content-primary -->
+
+    </div><!-- .l-1-col-master -->
+
+    {{/content}}
+
+{{/extend}}

@@ -11,7 +11,7 @@
         text-decoration: none;
     }
 
-    @include small-only {
+    @include medium-and-below {
         box-shadow: 0 0 rem-calc(30) rgba($black, .3);
 
         &.is-menu-open {
@@ -19,7 +19,7 @@
         }
     }
 
-    @include medium-and-above {
+    @include large-and-above {
         background: linear-gradient(rgba($blue-1, .8) 65%, transparent 95%);
         height: 255px;
         padding: 4rem 0;
@@ -49,14 +49,14 @@
 }
 
 .l-header__inner {
-    @include small-only {
+    @include medium-and-below {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         padding-top: 1rem;
     }
 
-    @include medium-and-above {
+    @include large-and-above {
         align-items: flex-end;
         border-bottom: 2px solid $white;
         display: flex;
@@ -84,7 +84,7 @@
     transition: .5s ease;
     transition-property: font-size, margin, color;
 
-    @include small-only {
+    @include medium-and-below {
         color: $black;
         font-size: rem-calc(16);
         margin-bottom: 1rem;
@@ -92,7 +92,7 @@
         padding-left: 1rem;
     }
 
-    @include medium-and-above {
+    @include large-and-above {
         color: $white;
 
         &:hover,
@@ -102,7 +102,7 @@
     }
 }
 
-@include small-only {
+@include medium-and-below {
     .nav-wrap {
         display: flex;
         flex-direction: column;

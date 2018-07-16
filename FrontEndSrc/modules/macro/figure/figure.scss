@@ -1,21 +1,8 @@
 /* YAPL
 name: Figure (image w/caption)
 notes: Main image and caption
-context: figure.mainImage
+context: figure.mastersub
 */
-
-/* YAPL
-name: Figure (image w/caption)
-notes: Main image and caption - Floated Right
-context: figure.mainImageRight
-*/
-
-/* YAPL
-name: Figure (video)
-notes: Main video without caption
-context: figure.videoNoCaption
-*/
-
 
 .rtf figure,
 figure.figure {
@@ -27,12 +14,29 @@ figure.figure {
     .figure__caption {
         caption-side: bottom;
         display: table-caption;
+        font-size: rem-calc(14);
+        margin-top: .5rem;
     }
 
     &.u-float-l,
     &.u-float-r {
-        width: auto;
-        max-width: 60%;
+        @include medium-and-above {
+            max-width: 50%;
+        }
+
+        @include large-and-above {
+            max-width: rem-calc(500);
+        }
+    }
+
+    &.u-float-l {
+        @include medium-and-above {
+            margin-right: 1.5rem;
+        }
+
+        @include large-and-above {
+            margin-right: 2.5rem;
+        }
     }
 }
 

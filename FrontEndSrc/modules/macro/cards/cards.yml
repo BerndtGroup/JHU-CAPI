@@ -1,0 +1,36 @@
+mastersub:
+  items:
+    - modifier: card--icon card--purple
+      title: PDF Description with Download
+      icon: 'icon/download--white.svg'
+      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.'
+      cta: Download
+    - modifier: card--icon card--red
+      title: PDF Description with Download
+      icon: 'icon/download--white.svg'
+      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.'
+      cta: Download
+    - modifier: card--icon card--orange
+      title: PDF Description with Download
+      icon: 'icon/download--white.svg'
+      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.'
+      cta: Download
+
+related-resources:
+  title: Related Resources
+  items:
+    - modifier: card--image card--teal card--shadowed
+      title: Header
+      image: 'temp/related-resources-1.jpg'
+      text: Descriptive text lorem ipsum dolor sit amet.
+      cta: Read More
+    - modifier: card--image card--teal card--shadowed
+      title: Header
+      image: 'temp/related-resources-2.jpg'
+      text: Descriptive text lorem ipsum dolor sit amet.
+      cta: Read More
+    - modifier: card--image card--teal card--shadowed
+      title: Header
+      image: 'temp/related-resources-3.jpg'
+      text: Descriptive text lorem ipsum dolor sit amet.
+      cta: Read More

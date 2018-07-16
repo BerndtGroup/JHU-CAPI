@@ -1,4 +1,7 @@
 {{! The Table Partial }}
+{{#if responsive}}
+<div class="table--responsive">
+{{/if}}
 
 <table class="table {{modifier}}">
 
@@ -31,3 +34,6 @@
 {{/if}}
 
 </table>
+{{#if responsive}}
+</div>
+{{/if}}

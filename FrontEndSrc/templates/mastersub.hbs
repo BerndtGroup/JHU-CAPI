@@ -4,16 +4,29 @@ description: Description
 ---
 
 {{#extend "1-col-master"}}
-
     {{#content "content-primary"}}
 
     <!-- YAPL
-    name: Master Subpage Tempolate
+    name: Master Subpage
     notes: General content detail page which provides an example of rich text styles and other basic page elements.
     -->
+    <div class="background--gray">
+        {{> hero hero.mastersub }}
 
-    MASTER SUB CONTENT
+        {{> rtf-mastersub }}
+
+        <div class="l-contain">
+            {{> link-block link-block.mastersub }}
+
+            {{> cards cards.mastersub }}
+        </div>
+
+        <div class="l-related-resources">
+            <div class="l-contain">
+                {{> cards cards.related-resources }}
+            </div>
+        </div>
+    </div>
 
     {{/content}}
-
 {{/extend}}

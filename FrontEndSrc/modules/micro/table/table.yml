@@ -33,7 +33,7 @@ default:
         - Lorem Ipsum
         - Lorem Ipsum
 master:
-  modifier: table--bordered table--striped
+  responsive: true
   thead:
     rows:
       -

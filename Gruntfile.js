@@ -566,11 +566,11 @@ module.exports = function (grunt) {
         'replace:patternLibrary'
     ]);
 
-    grunt.registerTask('bed', [
-        'clean:dist',
-        // 'imageEmbed:tmp', //FIXME Throwing error
-        'copy:tmpAndPatternLibraryToDist'
-    ]);
+    // grunt.registerTask('bed', [
+    //     'clean:dist',
+    //     // 'imageEmbed:tmp', //FIXME Throwing error
+    //     'copy:tmpAndPatternLibraryToDist'
+    // ]);
 
     grunt.registerTask('default', function () {
         var skipNpmInstall = grunt.option('skip-install');

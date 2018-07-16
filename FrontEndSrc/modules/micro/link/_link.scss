@@ -10,6 +10,7 @@
         content: '';
         display: inline-block;
         height: rem-calc(30);
+        transition: background .4s ease;
         width: rem-calc(30);
     }
 }
@@ -36,7 +37,6 @@
     &.icon-link--gray {
         &::before {
             background-image: url('/images/assets/icon/envelope--gray.svg');
-
         }
     }
 }
@@ -49,7 +49,6 @@
     &.icon-link--gray {
         &::before {
             background-image: url('/images/assets/icon/phone--gray.svg');
-
         }
     }
 }
@@ -62,7 +61,27 @@
     &.icon-link--gray {
         &::before {
             background-image: url('/images/assets/icon/location--gray.svg');
+        }
+    }
+}
 
+.icon-link--arrow {
+    &::before {
+        background-image: url('/images/assets/icon/arrow--teal.svg');
+        height: rem-calc(9);
+        width: rem-calc(12);
+    }
+
+    &:hover,
+    &:focus {
+        &::before {
+            background-image: url('/images/assets/icon/arrow--white.svg');
+        }
+    }
+
+    &.icon-link--after {
+        &::before {
+            margin-left: rem-calc(10);
         }
     }
 }

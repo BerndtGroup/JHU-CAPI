@@ -1,0 +1,25 @@
+<div class="cards">
+    {{#if title}}
+    <h2 class="cards__title">{{title}}</h2>
+    {{/if}}
+    {{#each items}}
+    <div class="card{{#if modifier}} {{modifier}}{{/if}}">
+        {{#if image}}
+            <div class="card__image" style="background-image: url('/images/{{image}}')"></div>
+        {{/if}}
+
+        {{#if icon}}
+            <div class="card__header">
+                <img class="card__header-image" src="/images/assets/{{icon}}" alt="">
+                <h2 class="card__title">{{title}}</h2>
+            </div>
+        {{/if}}
+
+        <div class="card__content">
+            {{#if image}}<h2 class="card__title">{{title}}</h2>{{/if}}
+            <p class="card__text">{{text}}</p>
+            <a href="#" class="btn">{{cta}}</a>
+        </div>
+    </div>
+    {{/each}}
+</div>

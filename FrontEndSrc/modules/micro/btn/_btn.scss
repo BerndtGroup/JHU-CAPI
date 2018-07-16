@@ -11,22 +11,45 @@ context: btn.default
     border-radius: rem-calc(5);
     cursor: pointer;
     display: inline-block;
+    font-weight: $weight-semibold;
     line-height: 1;
-    padding: rem-calc(8) rem-calc(20);
+    padding: rem-calc(10) rem-calc(16) rem-calc(8);
 
     &:hover {
         text-decoration: none;
     }
 
+    &.btn--inline + .btn--inline {
+        margin-left: .75rem;
+    }
+
+    &.btn--inline {
+        padding: rem-calc(8) rem-calc(16);
+    }
 }
 
 .btn--teal {
     background-color: $teal-1;
+    border: 2px solid $teal-1;
     color: $white;
 
     &:hover,
     &:focus {
         background-color: $blue-1;
+        border-color: $blue-1;
+    }
+
+    &.btn--hollow {
+        background-color: transparent;
+        border: 2px solid $teal-1;
+        color: $teal-1;
+
+        &:hover,
+        &:focus {
+            background-color: $blue-1;
+            border-color: $blue-1;
+            color: $white;
+        }
     }
 }
 
@@ -35,7 +58,6 @@ context: btn.default
     border-radius: 5px;
     color: $white;
     display: inline-block;
-    padding: rem-calc(10) rem-calc(16) rem-calc(8);
 
     &:hover,
     &:focus {

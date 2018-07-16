@@ -35,10 +35,12 @@
 // Something can be considered "macro" if, by definition, it is composed of multiple, or "sub" elements
 
 @import 'modules/macro/feature-image/feature-image';
+@import 'modules/macro/cards/cards';
 @import 'modules/macro/figure/figure';
 @import 'modules/macro/hero/hero';
 @import 'modules/macro/nav-primary/nav-primary';
 @import 'modules/macro/portlet/portlet';
+@import 'modules/macro/link-block/link-block';
 @import 'modules/macro/sponsor-info/sponsor-info';
 @import 'modules/macro/tiles/tiles';
 @import 'modules/macro/utility-nav/utility-nav';

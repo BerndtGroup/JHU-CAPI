@@ -8,11 +8,23 @@
     width: $contain-inner-width;
 }
 
-// generic vertical spacing classes
-@for $i from 0 to 8 {
-    @include mtpt-rules($i, 'l-');
-}
-
 .l-contain {
     @include l-contain;
+}
+
+.l-related-resources {
+    position: relative;
+
+    &::after {
+        background-color: $teal-1;
+        bottom: 0;
+        content: '';
+        display: block;
+        height: calc(100% - 225px);
+        left: 0;
+        position: absolute;
+        right: 0;
+        width: 100%;
+        z-index: 1;
+    }
 }

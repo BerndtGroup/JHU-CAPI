@@ -4,15 +4,40 @@
     background-size: cover;
     position: relative;
 
-    @include small-only {
-        min-height: rem-calc(500);
-        padding: rem-calc(150) 0 rem-calc(40);
+    &.hero--home {
+        @include small-only {
+            min-height: rem-calc(500);
+            padding: rem-calc(150) 0 rem-calc(40);
+        }
+
+        @include medium-only {
+            min-height: rem-calc(550);
+            padding: rem-calc(150) 0 rem-calc(40);
+        }
+
+        @include large-and-above {
+            min-height: rem-calc(660);
+            padding-bottom: rem-calc(80);
+            padding-top: rem-calc(300);
+        }
     }
 
-    @include medium-and-above {
-        min-height: rem-calc(660);
-        padding-bottom: rem-calc(80);
-        padding-top: rem-calc(300);
+    &.hero--inner {
+        @include small-only {
+            min-height: rem-calc(350);
+            padding: rem-calc(150) 0 rem-calc(40);
+        }
+
+        @include medium-only {
+            min-height: rem-calc(400);
+            padding: rem-calc(150) 0 rem-calc(40);
+        }
+
+        @include large-and-above {
+            min-height: rem-calc(425);
+            padding-bottom: rem-calc(80);
+            padding-top: rem-calc(300);
+        }
     }
 }
 
@@ -28,22 +53,24 @@
 
 .hero__title {
     font-family: $brandon;
-    font-size: rem-calc(47);
+    font-size: rem-calc(48);
     font-weight: $weight-bold;
     margin-bottom: 1.5rem;
     max-width: 100%;
     padding-bottom: 1rem;
     position: relative;
 
-    &::after {
-        background-color: $teal-1;
-        bottom: 0;
-        content: '';
-        display: block;
-        height: rem-calc(2);
-        left: calc(50% - 40px);
-        position: absolute;
-        width: rem-calc(80);
+    .hero--home & {
+        &::after {
+            background-color: $teal-1;
+            bottom: 0;
+            content: '';
+            display: block;
+            height: rem-calc(2);
+            left: calc(50% - 40px);
+            position: absolute;
+            width: rem-calc(80);
+        }
     }
 
     @include medium-and-above {
