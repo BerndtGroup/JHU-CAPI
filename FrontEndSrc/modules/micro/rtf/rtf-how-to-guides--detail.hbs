@@ -1,0 +1,109 @@
+<div class="rtf rtf--landing">
+    <section class="js-nav-section" id="title">
+        <h1>Overview of Your ODK System</h1>
+
+        <p>Descriptive Text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</p>
+
+        <h2>Title</h2>
+
+        <p>Body Copy Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+
+        {{> figure figure.how-to-guides-detail--overview }}
+    </section>
+
+    <section class="js-nav-section" id="introduction">
+        <h2>Introduction</h2>
+
+        <p>Open Data Kit (ODK) is a group of software tools for managing mobile data collection. A key component of ODK is offline data collection&ndash;the ability to collect data without internet connectivity.</p>
+
+        {{> link-block link-block.open-data-kit }}
+    </section>
+
+    <section class="js-nav-section" id="odk-system-components">
+        <h2>ODK System Components</h2>
+
+        <h3 id="questionnaires">Questionnaires</h3>
+
+        <p>Questionnaires start as paper documents or word files. These are conceptual models of what questions need to be asked, and in what order. Once the forms are completed, someone with ODK questionnaire experience converts the questions and expected responses into a Microsoft Excel document using the XLSForm design. This is a precise format for converting questionnaires into ODK electronic format using Microsoft Excel.</p>
+
+        <p>Links and Examples:</p>
+
+        {{> link-block link-block.questionnaires }}
+
+        <p>Once the Excel file is completed, it must be converted into an XForm. Normally, this is done on the ODK XLSForm conversion page:</p>
+
+        {{> link-block link-block.xiframe }}
+
+        <p>After conversion, the file should be saved on a local computer. It is now ready to upload to the ODK Aggregate Server. Note, there are other conversion tools available. Some tools require no internet connectivity like the xlsform on opendatakit.org.</p>
+
+        <h3 id="server">Server</h3>
+
+        <p>Storage and Management</p>
+
+        <ol class="not-indented">
+            <li>
+               <p>Server Overview</p>
+
+                <p>The Remote Server, also referred to as a Cloud Server, is a physical machine or virtual machine that can be purchased, initiated, and configured through a web browser. The advantages are high-availability, low cost, and consistency. Our server model uses a remote server from the company DigitalOcean.com.</p>
+
+                {{> table table.how-to-guides-detail--overview }}
+            </li>
+            <li>
+                <p>Server Components</p>
+
+                <p>Below are descriptions of main components of the Remote Server: Operating System (OS), Database, Web Server.</p>
+                <ol>
+                    <li>
+                        OS: Linux Ubuntu. An OS is the underlying platform software which controls the server. Choosing Linux means a choice of the family of software that can run on the Linux platform. The software in the Linux family is open source. There are no licensing fees with this software. Apple and Microsoft software will not run on a Linux OS.
+                    </li>
+                    <li>
+                        Web Server: Tomcat. The Web Server manages all the web sites on a server. In our system, the main website hosted on the Remote Server is the ODK Aggregate site.
+
+                        <ul>
+                            <li>Forms can be uploaded as Xform files.</li>
+                            <li>Tablets download the blank forms, collect data, then upload.</li>
+                            <li>Data can be viewed and downloaded.</li>
+                            <li>User account management</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <p>Additional optional websites include the Dashboard and the Admin interface.</p>
+            </li>
+            <li>
+                Database: MySQL (by Oracle). This is the main data repository on the server. ODK Aggregate uses a database in MySQL to store form definitions, user Accounts, and form data. MySQL is a database management system. It is not limited to storing ODK data. It can store data, tables, or databases from other software or custom web applications.
+            </li>
+        </ol>
+
+        <h3 id="tablets">Tablets</h3>
+
+        {{> link-block link-block.tablets }}
+
+        {{> link-block link-block.odk-collect }}
+
+        <p>Once ODK Collect is installed, ODK Collect is configured with the internet address (HTTP address) of the server and with a user name and password. The user name and password must be first created on the Server ODK Aggregate website.</p>
+        <p>Once the server connection is established, forms are downloaded to the tablet. The table can disconnect from the internet and data collection can proceed.</p>
+        <p>At the completion of data collection, or at regular intervals, the completed forms must be uploaded to the server. The tablet must be connected to the internet,  the completed forms are submitted, and the data is removed from the tablets.</p>
+
+        <h3 id="data-retrieval">Data Retrieval</h3>
+        <p>Supervisors and data analysts can retrieve the data using various systems:</p>
+
+        {{> link-block link-block.data-retrieval }}
+
+        {{> image-block image-block.mysql }}
+
+        {{> image-block image-block.dashboard }}
+    </section>
+
+    <section class="js-nav-section" id="external-consultants">
+        <h2>External Consultants</h2>
+        <p>Instead of using ODK Collect to gather your survey results, you can use a third-party alternative:</p>
+
+        {{> link-block link-block.external-consultants }}
+
+        <h3>Step 1</h3>
+
+        {{> image-block image-block.step-1 }}
+    </section>
+</div>

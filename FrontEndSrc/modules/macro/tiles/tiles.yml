@@ -1,4 +1,6 @@
 homepage:
+  modifier: home
+  is-expandable: true
   items:
     - icon: 'assets/icon/book--teal.svg'
       title: How-To-Guides
@@ -30,3 +32,55 @@ homepage:
       inner: >
         <a href="mailto:emailaddress@jhu.edu" class="icon-link icon-link--email icon-link--before">emailaddress@jhu.edu</a>
         <a href="410-955-3543" class="icon-link icon-link--phone icon-link--before">410-955-3543</a>
+
+how-to-guides:
+  modifier: landing
+  items:
+    - icon: 'assets/icon/molecule--teal.svg'
+      title: Overview of your ODK System
+      tag: ODK
+      inner: >
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus.</p>
+        <div class="btn btn--teal">Learn More</div>
+    - icon: 'assets/icon/notes--teal.svg'
+      title: Creating an XLS Form Questionnaire
+      tag: ODK
+      inner: >
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus.</p>
+        <div class="btn btn--teal">Learn More</div>
+    - icon: 'assets/icon/server--teal.svg'
+      title: Deploying a Remote Server
+      tag: ODK
+      inner: >
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus.</p>
+        <div class="btn btn--teal">Learn More</div>
+    - icon: 'assets/icon/phone-alt--teal.svg'
+      title: The Handheld Device
+      tag: ODK
+      inner: >
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus.</p>
+        <div class="btn btn--teal">Learn More</div>
+    - icon: 'assets/icon/download--teal.svg'
+      title: Downloading and Merging Data
+      tag: ODK
+      inner: >
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus.</p>
+        <div class="btn btn--teal">Learn More</div>
+    - icon: 'assets/icon/magnifying-glass--teal.svg'
+      title: Monitoring Incoming Survey Data
+      tag: ODK
+      inner: >
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus.</p>
+        <div class="btn btn--teal">Learn More</div>
+    - icon: 'assets/icon/book-alt--teal.svg'
+      title: Best Practices
+      tag: ODK
+      inner: >
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus.</p>
+        <div class="btn btn--teal">Learn More</div>
+    - icon: 'assets/icon/tablet--teal.svg'
+      title: Tablet Handling Guidelines
+      tag: ODK
+      inner: >
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus.</p>
+        <div class="btn btn--teal">Learn More</div>

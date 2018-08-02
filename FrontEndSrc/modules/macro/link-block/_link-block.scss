@@ -1,11 +1,16 @@
 .link-block {
-    padding: 2rem 0;
+    margin: 2rem 0;
 }
 
 .link-block__item {
     background-color: $white;
     border-radius: 9px;
     margin-bottom: 2rem;
+
+    .link-block--shaded & {
+        background-color: $gray-4;
+        border: 1px solid $gray-5;
+    }
 
     &:last-child {
         margin-bottom: 0;
@@ -41,13 +46,16 @@
     align-items: center;
     display: flex;
     flex-wrap: wrap;
-    padding: 2rem;
+
+    .link-block--shaded & {
+        padding: 2rem;
+    }
 
     .btn {
         margin-top: 1rem;
     }
 
-    @include small-only {
-        padding: 1.5rem;
+    @include medium-and-above {
+        padding: 2rem;
     }
 }

@@ -1,3 +1,26 @@
+data-retrieval:
+  modifier: shaded
+  items:
+    - text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.'
+      cta: ODK Briefcase
+      image: temp/ms-link-1.jpg
+    - text: 'Data can be viewed or downloaded directly from the website. Click Export to download.'
+      cta: 'Server: ODK Aggregate'
+      image: temp/ms-link-1.jpg
+
+external-consultants:
+  modifier: shaded
+  items:
+    - text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.'
+      cta: Survey CTO
+      image: temp/ms-link-1.jpg
+    - text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.'
+      cta: Magpi
+      image: temp/ms-link-1.jpg
+    - text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.'
+      cta: REDcap
+      image: temp/ms-link-1.jpg
+
 mastersub:
   items:
     - text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.'
@@ -6,3 +29,39 @@ mastersub:
     - text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.'
       cta: 3rd Party Links
       image: temp/ms-link-2.jpg
+
+odk-collect:
+  modifier: shaded
+  items:
+    - text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.'
+      cta: Download on the Google Play Store
+      image: temp/ms-link-1.jpg
+
+open-data-kit:
+  modifier: shaded
+  items:
+    - text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.'
+      cta: Visit opendatakit.org
+      image: temp/htgd-link-1.png
+
+questionnaires:
+  modifier: shaded
+  items:
+    - text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.'
+      cta: Visit opendatakit.org/use/xlsform/
+      image: temp/ms-link-1.jpg
+    - text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.'
+      cta: Visit xlsform.org
+      image: temp/ms-link-1.jpg
+
+tablets:
+  items:
+    - text: 'Electronic tablets or Smartphones with the Android operating system are required to collect data. Internet connectivity is not necessary for data collection, but it is required for software installation, configuration, form download, and data submission.<br><br>ODK Collect must be downloaded from the Google Play store and installed on the device.'
+      image: temp/htgd-tablets.jpg
+
+xiframe:
+  modifier: shaded
+  items:
+    - text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.'
+      cta: Visit opendatakit.org/xiframe
+      image: temp/htgd-link-4.png

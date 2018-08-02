@@ -3,3 +3,7 @@ mastersub:
   image: temp/ms-figure.jpg
   caption: 'Optional Caption: Lorem ipsum dolor sit amet'
 
+how-to-guides-detail--overview:
+  modifier: figure--shadow mw-100
+  image: temp/htgd-odk.jpg
+  caption: '<strong>ODK System Model:</strong> This shows the system divided into four interconnecting sections: 1) Questionaires, 2) Server, 3) Tablets and 4) Data retrieval'

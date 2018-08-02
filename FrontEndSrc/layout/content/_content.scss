@@ -1,3 +1,56 @@
 /* ======  Content Layout Styles ====== */
 
-// .l-content-primary {}
+//sass-lint:disable placeholder-name-format
+
+.l-2-col-master {
+    margin-top: rem-calc(110);
+
+    @include large-and-above {
+        margin-top: rem-calc(260);
+    }
+
+    .l-content-primary {
+        > *:last-child {
+            margin-bottom: 0;
+            margin-top: 0;
+        }
+    }
+
+    .l-content-secondary {
+        > *:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+@include medium-and-below {
+
+    // Primary Column
+    .l-content-primary {
+        margin-bottom: 4rem;
+    }
+}
+
+@include large-and-above {
+
+    // Primary Column
+    .l-content-primary {
+        .l-2-col-master & {
+            float: left;
+            margin-left: 3.333333333%; // 40px
+            width: 70.666666666%; // 848px
+        }
+    }
+
+    // Secondary Column
+    .l-content-secondary {
+        float: left;
+        min-height: 1px;
+
+        .l-2-col-master & {
+            position: relative;
+            width: 26%; // 312px
+        }
+    }
+
+}

@@ -36,6 +36,14 @@ textarea {
     text-shadow: none;
 }
 
+body {
+    &.no-scroll {
+        overflow: hidden;
+        position: fixed;
+        width: 100%;
+    }
+}
+
 fieldset {
     border: 0;
     margin: 0;

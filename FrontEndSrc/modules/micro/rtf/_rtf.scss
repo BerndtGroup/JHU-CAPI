@@ -11,8 +11,8 @@ body {
 // Anchor Styles
 
 %a {
-    cursor: pointer;
     color: $teal-1;
+    cursor: pointer;
 
     &:hover,
     &:focus {
@@ -26,7 +26,7 @@ body {
 }
 
 .rtf {
-    margin-top: 4rem;
+    margin-top: 3rem;
 }
 
 
@@ -53,12 +53,18 @@ body {
 // Header Styles
 
 .h1,
-.rtf h1 {
+.rtf h1,
+.rtf--landing h1 {
     font-size: rem-calc(32);
 
     &::after {
         width: rem-calc(80);
     }
+}
+
+.rtf--landing h1 {
+    font-size: rem-calc(48);
+    text-align: center;
 }
 
 .h2,
@@ -71,11 +77,17 @@ body {
 
 }
 
+.rtf--landing h2 {
+    font-size: rem-calc(32);
+}
+
 .h3,
 .rtf h3 {
-    &::after {
-        width: rem-calc(40);
-    }
+    font-size: rem-calc(24);
+
+    // &::after {
+    //     width: rem-calc(40);
+    // }
 }
 
 .h4,
@@ -92,13 +104,17 @@ body {
     h1,
     h2,
     h3 {
-        display: inline-block;
         font-family: $brandon;
         font-weight: $weight-bold;
         margin-bottom: .75rem;
-        margin-top: 3rem;
+        margin-top: 2rem;
         padding-bottom: .75rem;
         position: relative;
+    }
+
+    h1,
+    h2 {
+        display: inline-block;
 
         &::after {
             background-color: $teal-1;
@@ -118,7 +134,31 @@ body {
     }
 }
 
+.l-2-col-master .h1 {
+    font-family: $brandon;
+    font-size: rem-calc(24);
+    font-weight: $weight-bold;
+    line-height: 1.2;
+    margin-bottom: .75rem;
+}
 
+.l-2-col-master .h1,
+.l-2-col-master .rtf h1 {
+    display: block;
+    margin-top: 0;
+    text-align: center;
+
+    &::after {
+        display: none;
+    }
+}
+
+.l-2-col-master .rtf h1,
+.l-2-col-master h1 + p {
+    @include medium-and-below {
+        display: none;
+    }
+}
 
 // Body Copy Style
 
@@ -127,11 +167,35 @@ body {
     margin-bottom: 1rem;
 }
 
+.l-2-col-master h1 + p,
+.l-2-col-master .h1 + .p {
+    font-size: rem-calc(20);
+    line-height: 1.2;
+    margin-bottom: 0;
+    text-align: center;
+
+    @include large-and-above {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+
+.l-2-col-master .h1 + .p {
+    font-size: rem-calc(16);
+    line-height: 1.4;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
 .ul,
 .rtf ul,
 .ol,
 .rtf ol {
     margin-left: 2rem;
+
+    &.not-indented {
+        margin-left: 0;
+    }
 
     li {
         line-height: 1.6;

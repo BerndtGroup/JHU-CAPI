@@ -9,3 +9,9 @@ mastersub:
   image: temp/ms-hero.jpg
   title: Page Title
   subtitle: Descriptive Text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.
+
+how-to-guides-landing:
+  modifier: hero--inner
+  image: temp/htgl-hero.jpg
+  title: How-To-Guides
+  subtitle: Descriptive Text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.

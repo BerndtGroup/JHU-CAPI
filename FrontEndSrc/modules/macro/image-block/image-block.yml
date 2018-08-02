@@ -1,0 +1,19 @@
+dashboard:
+  expand: true
+  image: temp/htgd-dashboard.jpg
+  h4: true
+  title: 'Dashboard / Admin Interface'
+  text: 'Depending on the configuration and programming of the server, your Dashboard or Administrative interface may allow you to review or download data.'
+
+mysql:
+  expand: true
+  image: temp/htgd-mysql-client-tool.png
+  h4: true
+  title: 'MySQL Client tool'
+  text: 'Various client tools are available for connection directly to the MySQL database. Below is an example with MySQL Workbench running on a windows desktop. Direct database access is a powerful method for retrieving data:'
+
+step-1:
+  modifier: wide
+  expand: true
+  image: temp/htgd-step-1.png
+  text: 'Body Copy Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.<br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.'

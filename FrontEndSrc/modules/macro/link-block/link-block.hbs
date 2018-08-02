@@ -1,10 +1,12 @@
-<div class="link-block">
+<div class="link-block{{#if modifier}} link-block--{{modifier}}{{/if}}">
     {{#each items}}
     <div class="link-block__item">
         <div class="link-block__image" style="background-image: url('/images/{{image}}')"></div>
         <div class="link-block__content">
-            <p class="link-block__text">{{text}}</p>
-            <a href="#" class="btn btn--inline btn--teal btn--hollow icon-link icon-link--arrow icon-link--after">{{cta}}</a>
+            <p class="link-block__text">{{{text}}}</p>
+            {{#if cta}}
+                <a href="#" class="btn btn--inline btn--teal btn--hollow icon-link icon-link--arrow icon-link--after">{{cta}}</a>
+            {{/if}}
         </div>
     </div>
     {{/each}}

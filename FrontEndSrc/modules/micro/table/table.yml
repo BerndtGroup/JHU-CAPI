@@ -33,7 +33,9 @@ default:
         - Lorem Ipsum
         - Lorem Ipsum
 master:
+  modifier: table--has-row-headers table--full
   responsive: true
+  has-row-headers: true
   thead:
     rows:
       -
@@ -44,6 +46,7 @@ master:
         - Column 4
         - Column 5
   tbody:
+    has-row-headers: true
     rows:
       -
         - Data Row 1
@@ -202,3 +205,31 @@ hover:
         - Lorem Ipsum
         - Lorem Ipsum
         - Lorem Ipsum
+how-to-guides-detail--overview:
+  modifier: table--shaded
+  responsive: true
+  thead:
+    rows:
+      -
+        - "Pros"
+        - "Cons"
+  tbody:
+    rows:
+      -
+        - "Inexpensive"
+        - "Adipiscing elit"
+      -
+        - "Cost: ~$60-240 / year"
+        - "Justo commodo"
+      -
+        - "Quick to set up"
+        - "sodales pulvinar"
+      -
+        - "Expandable (Memory, Processor, and Storage can grow as needed)"
+        - "Cum sociis natoque penatibus et magnis dis parturient"
+      -
+        - "Automated backups"
+        - "Lorem ipsum"
+      -
+        - "Snapshots"
+        - "Dolor sit amet"

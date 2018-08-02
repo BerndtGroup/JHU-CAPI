@@ -1,0 +1,25 @@
+---
+title: How-To-Guides - Detail
+description: Description
+---
+
+{{#extend "2-col-master"}}
+
+    {{#content "content-secondary"}}
+
+        {{> nav-content nav-content.how-to-guides-detail }}
+
+    {{/content}}
+
+    {{#content "content-primary"}}
+
+        <!-- YAPL
+        name: How-To-Guides - Detail
+        notes: General content detail page which provides an example of rich text styles and other basic page elements.
+        -->
+        {{> rtf-how-to-guides--detail }}
+
+        {{> image-block-modal image-block-modal.how-to-guides-detail }}
+
+    {{/content}}
+{{/extend}}

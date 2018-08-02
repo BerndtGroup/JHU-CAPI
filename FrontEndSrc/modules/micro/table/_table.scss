@@ -26,7 +26,10 @@ context: table.default
     margin: 1.5rem 0;
     max-width: 100%;
     text-align: center;
-    width: 100%;
+
+    &--full {
+        width: 100%;
+    }
 
     th,
     td {
@@ -45,24 +48,28 @@ context: table.default
         text-align: center;
         vertical-align: bottom;
 
-        &:nth-child(3n-1) {
+        &:first-child,
+        .table--has-row-headers &:nth-child(3n-1) {
             background-color: $purple-1;
         }
 
-        &:nth-child(3n) {
+        &:nth-child(2n),
+        .table--has-row-headers &:nth-child(3n) {
             background-color: $red-1;
         }
 
-        &:nth-child(3n+1) {
+        &:nth-child(3n),
+        .table--has-row-headers &:nth-child(3n+1) {
             background-color: $orange-1;
         }
 
-        &:first-child {
+        .table--has-row-headers &:first-child {
             background-color: transparent;
             border: 0;
         }
 
-        &:nth-child(2) {
+        &:first-child,
+        .table--has-row-headers &:nth-child(2) {
             border-left: 0;
             border-radius: 9px 0 0;
         }
@@ -111,6 +118,11 @@ context: table.default
                 border-bottom: 0;
             }
 
+            > td:first-child {
+                border-radius: 0 0 0 9px;
+            }
+
+
             > td:last-child {
                 border-radius: 0 0 9px;
             }
@@ -120,7 +132,13 @@ context: table.default
             background-color: $white;
             border: 2px solid $table-border-color;
         }
+    }
 
+    &--shaded > tbody tr {
+        td {
+            background-color: $gray-4 !important;
+            border-color: $white !important;
+        }
     }
 
     // Account for multiple tbody instances
@@ -131,6 +149,32 @@ context: table.default
     // Nesting
     .table {
         background-color: inherit;
+    }
+}
+
+.table--has-row-headers {
+    > thead th {
+        &:nth-child(3n-1) {
+            background-color: $purple-1 !important;
+        }
+
+        &:nth-child(3n) {
+            background-color: $red-1 !important;
+        }
+
+        &:nth-child(3n+1) {
+            background-color: $orange-1 !important;
+        }
+
+        &:first-child {
+            background-color: transparent !important;
+            border: 0;
+        }
+
+        &:nth-child(2) {
+            border-left: 0;
+            border-radius: 9px 0 0;
+        }
     }
 }
 

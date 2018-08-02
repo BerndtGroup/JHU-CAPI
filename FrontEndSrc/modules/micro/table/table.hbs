@@ -22,8 +22,12 @@
     {{#each tbody.rows}}
         <tr>
         {{#each this}}
-            {{#if @first}}
-                <th>{{this}}</th>
+            {{#if ../../has-row-headers}}
+                {{#if @first}}
+                    <th>{{this}}</th>
+                {{else}}
+                    <td>{{this}}</td>
+                {{/if}}
             {{else}}
                 <td>{{this}}</td>
             {{/if}}

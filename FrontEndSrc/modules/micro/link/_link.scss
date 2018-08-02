@@ -85,3 +85,50 @@
         }
     }
 }
+
+.icon-link--expand {
+    &::before {
+        background-image: url('/images/assets/icon/expand--teal.svg');
+    }
+}
+
+.icon-link--close {
+    &::before {
+        background-image: url('/images/assets/icon/close--white.svg');
+        height: rem-calc(23);
+        width: rem-calc(23);
+    }
+}
+
+.icon-link--previous {
+    &::before {
+        background-image: url('/images/assets/icon/previous.svg');
+        height: rem-calc(70);
+        width: rem-calc(70);
+    }
+}
+
+.icon-link--next {
+    &::before {
+        background-image: url('/images/assets/icon/next.svg');
+        height: rem-calc(70);
+        width: rem-calc(70);
+    }
+}
+
+.icon-link--previous-alt {
+    &::before {
+        background-image: url('/images/assets/icon/arrow--white.svg');
+        height: rem-calc(20);
+        transform: rotate(180deg);
+        width: rem-calc(29);
+    }
+}
+
+.icon-link--next-alt {
+    &::before {
+        background-image: url('/images/assets/icon/arrow--white.svg');
+        height: rem-calc(20);
+        width: rem-calc(29);
+    }
+}

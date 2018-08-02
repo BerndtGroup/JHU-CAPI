@@ -15,6 +15,9 @@ $red-pure: #f00;
 $blue-light: #6babd7;
 $lightred: rgba(159, 94, 38, .25);
 $teal: #007886;
+$black-thirty: rgba($black, .3);
+$black-thirty-five: rgba($black, .35);
+$black-seventy-five: rgba($black, .75);
 
 //Text Color
 $t-white: rgba(255, 255, 255, .9);
@@ -41,6 +44,8 @@ $orange-1: #fa7533;
 $gray-1: #e2e2e2;
 $gray-2: #666;
 $gray-3: #4d4d4d;
+$gray-4: #f2f2f2;
+$gray-5: #999;
 
 // Font sizes by size/name
 $font-sizes-line-heights: (
@@ -85,6 +90,7 @@ $std-transition-time: 400ms;
 
 
 // Layout variables
+$content-secondary-padding: 20px;
 $vertical-gutter: 1rem;
 $grid-gutter: 3%;
 
@@ -102,6 +108,7 @@ $z-index-9: 9;
 $z-index-10: 10;
 
 // Z-index- Applications
+$z-index-image-block-modal: $z-index-9;
 $z-index-primary-nav-flyout-caret: $z-index-8;
 $z-index-closest-branch-flyout: $z-index-7;
 $z-index-primary-nav-flyout: $z-index-6;

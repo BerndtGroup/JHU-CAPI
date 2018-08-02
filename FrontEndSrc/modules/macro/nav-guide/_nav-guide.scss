@@ -1,0 +1,52 @@
+.nav-guide {
+    background-color: $teal-1;
+    color: $white;
+    line-height: 1.2;
+    padding: 70px 0;
+
+    &__previous,
+    &__next {
+        max-width: 208px;
+        width: 48%;
+    }
+
+    &__previous {
+        float: left;
+    }
+
+    &__previous-link {
+    }
+
+    &__previous-link,
+    &__next-link,
+    &__title {
+        font-size: rem-calc(16);
+        font-weight: $weight-semibold;
+    }
+
+    &__previous-link,
+    &__next-link {
+        color: $white;
+        margin-bottom: 1rem;
+        text-decoration: underline;
+
+        @include large-and-above {
+            font-size: rem-calc(24);
+        }
+    }
+
+    &__next {
+        float: right;
+
+        @include large-and-above {
+            margin-right: 5rem;
+        }
+    }
+
+    &__next-link {
+    }
+
+    &__title {
+        line-height: 1.2;
+    }
+}

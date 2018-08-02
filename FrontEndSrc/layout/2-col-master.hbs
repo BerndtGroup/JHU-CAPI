@@ -3,14 +3,32 @@ layout: default.hbs
 cols: 2
 ---
 
+{{#extend "default"}}
 
-<div class="l-2-col-master u-cf">
+    {{#content "body"}}
 
-    {{> content-nav }}
+    <div class="l-2-col-master">
 
-    <!-- Primary content container -->
-    <main class="l-content-primary">
-        {{#block "content-primary"}}{{/block}}
-    </main><!-- .content-primary -->
+        <div class="l-contain u-cf">
 
-</div><!-- .l-2-col-master -->
+            <!-- Secondary content container -->
+            <div class="l-content-secondary">
+                {{#block "content-secondary"}}{{/block}}
+            </div><!-- .content-secondary -->
+
+            <!-- Primary content container -->
+            <main class="l-content-primary">
+                {{#block "content-primary"}}{{/block}}
+            </main><!-- .content-primary -->
+
+        </div>
+
+    </div><!-- .l-2-col-master -->
+
+    {{> nav-guide nav-guide.how-to-guides-detail }}
+
+    {{/content}}
+
+{{/extend}}
+
+

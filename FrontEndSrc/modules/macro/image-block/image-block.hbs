@@ -1,0 +1,22 @@
+<div class="image-block{{#if modifier}} image-block--{{modifier}}{{/if}} js-image-block">
+    <div class="image-block__wrap">
+        <div class="image-block__image-wrap">
+            <div class="image-block__image" style="background-image: url('/images/{{image}}')"></div>
+            {{#if expand}}
+                <div class="image-block__expand-toggle-wrap">
+                    <a href="#" class="image-block__expand-toggle js-image-block__expand-toggle icon-link icon-link--before icon-link--teal icon-link--expand">Expand Image</a>
+                </div>
+            {{/if}}
+        </div>
+
+        <div class="image-block__content">
+            {{#if h3}}
+              <h3 class="image-block__header">{{{title}}}</h3>
+            {{/if}}
+            {{#if h4}}
+              <h4 class="image-block__header">{{{title}}}</h4>
+            {{/if}}
+            <p class="image-block__text">{{{text}}}</p>
+        </div>
+    </div>
+</div>

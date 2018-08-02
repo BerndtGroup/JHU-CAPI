@@ -1,0 +1,16 @@
+<div class="image-block-modal js-image-block-modal is-closed">
+    <div class="image-block-modal__wrap">
+        <div class="image-block-modal__slides">
+            {{#each items}}
+                <div class="image-block-modal__slide js-image-block-modal__slide">
+                    <a href="#" class="image-block-modal__close js-image-block-modal__close icon-link icon-link--close">Close</a>
+                    <img src="{{image}}" alt="" class="image-block-modal__image">
+                    <div class="image-block-modal__text js-image-block-modal__text">{{{text}}}</div>
+                </div>
+            {{/each}}
+        </div>
+
+        <a href="#" class="image-block-modal__previous js-image-block-modal__previous icon-link icon-link--previous">Previous</a>
+        <a href="#" class="image-block-modal__next js-image-block-modal__next icon-link icon-link--next">Next</a>
+    </div>
+</div>

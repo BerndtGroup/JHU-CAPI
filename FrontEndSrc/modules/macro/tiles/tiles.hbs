@@ -1,19 +1,37 @@
-<div class="l-tiles js-tiles">
+<div class="l-tiles{{#if modifier}} l-tiles--{{modifier}}{{/if}}{{#if is-expandable}} js-tiles{{/if}}">
     <div class="tiles__inner l-contain">
         {{#each items}}
         {{#if inner}}
-        <div class="tile tile--inner js-tile" tabindex="0">
+            {{#if ../../is-expandable}}
+                <div class="tile tile--inner js-tile" tabindex="0">
+            {{else}}
+                <a class="tile tile--inner" href="#">
+            {{/if}}
         {{else}}
-        <div class="tile">
+            {{#if ../../is-expandable}}
+            <div class="tile">
+            {{else}}
+            <a class="tile" href="#">
+            {{/if}}
         {{/if}}
             <div class="tile__content">
+                {{#if tag}}<div class="tile__tag">{{{tag}}}</div>{{/if}}
                 <div class="tile__icon-container">
                     <img class="tile__icon" src="/images/{{icon}}" alt="">
                 </div>
-                <h3 class="tile__title">{{title}}</h3>
-                {{#if inner}}<div class="tile__inner">{{{inner}}}</div>{{/if}}
+                {{#if ../is-expandable}}<h3 class="tile__title">{{{title}}}</h3>{{/if}}
+                {{#if inner}}
+                <div class="tile__inner">
+                    {{#unless ../../is-expandable}}<h3 class="tile__title">{{{title}}}</h3>{{/unless}}
+                    {{{inner}}}
+                </div>
+                {{/if}}
             </div>
+        {{#if ../is-expandable}}
         </div>
+        {{else}}
+        </a>
+        {{/if}}
         {{/each}}
     </div>
 </div>

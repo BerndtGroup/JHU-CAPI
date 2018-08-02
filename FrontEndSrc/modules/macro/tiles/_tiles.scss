@@ -2,6 +2,14 @@
     margin-top: 3rem;
     position: relative;
     z-index: 3;
+
+    &--landing {
+        padding-bottom: 2rem;
+
+        @include medium-and-above {
+            margin-top: 3.5rem;
+        }
+    }
 }
 
 .tiles__inner {
@@ -15,9 +23,17 @@
 }
 
 .tile {
-    color: $white;
     text-align: center;
     text-decoration: none;
+
+    .l-tiles--home & {
+        color: $white;
+    }
+
+    .l-tiles--landing & {
+        color: $black;
+        display: flex;
+    }
 
     @include small-only {
         flex: 0 0 100%;
@@ -41,49 +57,79 @@
         }
     }
 
-    @include large-and-above {
-        flex: 0 0 32%;
-        margin: 0 auto;
+    @include medium-and-above {
+        .l-tiles--home & {
+            .tile__inner {
+                margin: 0;
+                max-height: 0;
+                opacity: 0;
+                overflow: hidden;
+                transition: .6s ease;
+                transition-property: opacity, max-height, padding, margin;
+            }
 
-        &:nth-child(3n-2) {
-            margin-left: 0;
+            .btn {
+                margin-top: 1rem;
+            }
+
+            &.is-open {
+                .tile__content {
+                    box-shadow: 0 0 rem-calc(50) rgba($black, .45);
+                    padding-top: 1.75rem;
+                    transform: translateY(-60px);
+                }
+
+                .tile__inner {
+                    margin-top: .35rem;
+                    max-height: rem-calc(200);
+                    opacity: 1;
+                    padding-top: .5rem;
+                }
+            }
         }
 
-        &:nth-child(3n) {
-            margin-right: 0;
-        }
+        .l-tiles--landing & {
+            margin-bottom: 1.5rem;
 
-        &:nth-child(n+4) {
-            margin-top: 1.5rem;
+            .btn {
+                margin-top: .25rem;
+            }
         }
     }
 
-    @include medium-and-above {
-        .tile__inner {
-            margin: 0;
-            max-height: 0;
-            opacity: 0;
-            overflow: hidden;
-            transition: .6s ease;
-            transition-property: opacity, max-height, padding, margin;
-        }
+    @include large-and-above {
+        margin: 0 auto;
 
-        .btn {
-            margin-top: 1rem;
-        }
+        .l-tiles--home & {
+            flex: 0 0 32%;
 
-        &.is-open {
-            .tile__content {
-                box-shadow: 0 0 rem-calc(50) rgba($black, .45);
-                padding-top: 1.75rem;
-                transform: translateY(-60px);
+            &:nth-child(3n-2) {
+                margin-left: 0;
             }
 
-            .tile__inner {
-                margin-top: .35rem;
-                max-height: rem-calc(200);
-                opacity: 1;
-                padding-top: .5rem;
+            &:nth-child(3n) {
+                margin-right: 0;
+            }
+
+            &:nth-child(n+4) {
+                margin-top: 1.5rem;
+            }
+        }
+
+        .l-tiles--landing & {
+            flex: 0 0 23%;
+            margin-right: 2%;
+
+            &:nth-child(4n+1) {
+                margin-left: 0;
+            }
+
+            &:nth-child(4n) {
+                margin-right: 0;
+            }
+
+            &:nth-child(n+5) {
+                margin-top: 1.5rem;
             }
         }
     }
@@ -91,19 +137,30 @@
 
 .tile__content {
     align-items: center;
-    background-color: $blue-1;
     border-radius: 8px;
-    box-shadow: none;
     display: flex;
     flex-direction: column;
-    padding: 1.5rem 1rem;
-    transition: .5s ease;
-    transition-property: box-shadow, transform, padding;
 
-    @include medium-and-above {
-        height: rem-calc(375);
-        padding: 1.5rem;
-        padding-top: 2.5rem;
+    .l-tiles--home & {
+        background-color: $blue-1;
+        box-shadow: none;
+        padding: 1.5rem 1rem;
+        transition: .5s ease;
+        transition-property: box-shadow, transform, padding;
+
+        @include medium-and-above {
+            height: rem-calc(375);
+            padding: 1.5rem;
+            padding-top: 2.5rem;
+        }
+    }
+
+    .l-tiles--landing & {
+        background-color: $teal-1;
+        box-shadow: 7px 7px 5px 0 $black-thirty-five;
+        padding-top: 1.5rem;
+        position: relative;
+        width: 100%;
     }
 }
 
@@ -120,18 +177,39 @@
     will-change: width, height;
 
     @include small-only {
-        height: rem-calc(71);
-        width: rem-calc(71);
+        .l-tiles--home & {
+            height: rem-calc(71);
+            width: rem-calc(71);
+        }
+
+        .l-tiles--landing & {
+            height: rem-calc(115);
+            width: rem-calc(115);
+        }
 
         img {
-            max-height: rem-calc(38);
-            max-width: rem-calc(38);
+            .l-tiles--home & {
+                max-height: rem-calc(38);
+                max-width: rem-calc(38);
+            }
+
+            .l-tiles--landing & {
+                max-height: rem-calc(60);
+                max-width: rem-calc(60);
+            }
         }
     }
 
     @include medium-and-above {
-        height: rem-calc(178);
-        width: rem-calc(178);
+        .l-tiles--home & {
+            height: rem-calc(178);
+            width: rem-calc(178);
+        }
+
+        .l-tiles--landing & {
+            height: rem-calc(145);
+            width: rem-calc(145);
+        }
 
         .is-open & {
             height: rem-calc(89);
@@ -146,8 +224,15 @@
         }
 
         img {
-            max-height: rem-calc(100);
-            max-width: rem-calc(90);
+            .l-tiles--home & {
+                max-height: rem-calc(100);
+                max-width: rem-calc(90);
+            }
+
+            .l-tiles--landing & {
+                max-height: rem-calc(78);
+                max-width: rem-calc(78);
+            }
 
             transition: .4s ease;
             transition-property: max-height, max-width;
@@ -159,7 +244,7 @@
     font-family: $brandon;
     font-size: rem-calc(24);
     font-weight: $weight-bold;
-    margin-top: 1rem;
+    line-height: 1.2;
     padding-bottom: 1rem;
     position: relative;
 
@@ -168,14 +253,35 @@
         content: '';
         display: block;
         height: rem-calc(2);
-        left: calc(50% - 20px);
         position: absolute;
         top: 100%;
-        width: rem-calc(40);
     }
 
-    @include medium-and-above {
-        margin-top: 2rem;
+    .l-tiles--home & {
+        margin-top: 1rem;
+
+        &::after {
+            left: calc(50% - 20px);
+            width: rem-calc(40);
+        }
+
+        @include medium-and-above {
+            margin-top: 2rem;
+        }
+    }
+
+    .l-tiles--landing & {
+        margin-bottom: 1rem;
+
+        &::after {
+            left: calc(50% - 30px);
+            width: rem-calc(60);
+        }
+    }
+
+    .l-tiles--landing .tile:focus &,
+    .l-tiles--landing .tile:hover & {
+        color: $teal-1;
     }
 }
 
@@ -202,5 +308,52 @@
         .btn {
             margin-top: 1rem;
         }
+    }
+
+    .l-tiles--landing & {
+        background-color: $white;
+        border-radius: 8px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        font-size: rem-calc(13);
+        margin-top: 1rem;
+        padding: 1.5rem 1rem;
+
+        @include medium-and-above {
+            display: flex;
+            flex: 1 0 auto;
+            flex-direction: column;
+            padding: 1.5rem;
+
+            p {
+                flex: 1 0 auto;
+            }
+        }
+
+        .btn {
+            align-self: center;
+            font-size: 1rem;
+            margin-top: .5rem;
+        }
+
+        &:hover,
+        &:focus {
+            .btn {
+                background-color: $white;
+                border-color: $teal-1;
+                color: $teal-1;
+            }
+        }
+    }
+}
+
+.tile__tag {
+    .l-tiles--landing & {
+        color: $white;
+        font-size: rem-calc(12);
+        font-weight: $weight-bold;
+        left: 1rem;
+        position: absolute;
+        top: 1rem;
     }
 }

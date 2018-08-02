@@ -197,7 +197,7 @@
         display: block;
         line-height: 1.3;
         padding: .75rem 1.5rem;
-        text-transform: capitalize;
+        text-transform: none;
         width: 100%;
 
         @include medium-and-below {
