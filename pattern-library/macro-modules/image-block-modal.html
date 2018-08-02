@@ -1,0 +1,152 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if IE 9]>         <html class="no-js lt-ie10"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Macro Modules | Image Block Modal</title>
+    <meta name="description" content="Pattern Library">
+
+
+    <!-- We'll require the same CSS/JS as the main templates, so load that in as a shared partial (also in footer) -->
+    <link rel="stylesheet" href="https://use.typekit.net/vzb0ccr.css">
+    <link rel="stylesheet" href="../../css/main.css">
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../../pattern-library/yapl.css">
+
+
+</head>
+
+<body class="sg-body js-sg-body">
+
+    <div class="sg-nav-wrap open-sans">
+        <span class="sg-nav__close js-sg-nav-toggle">Close</span>
+        <nav class="sg-nav">
+            <ul class="sg-nav__level1">
+                <li>
+                    <a href="../../pattern-library/micro-modules/index.html" class="sg-nav__level1-title open-sans--semibold">Micro Modules</a>
+                    <ul class="sg-nav__level2">
+                        <li><a class="sg-link" href="../../pattern-library/micro-modules/table.html">Table</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="../../pattern-library/macro-modules/index.html" class="sg-nav__level1-title open-sans--semibold">Macro Modules</a>
+                    <ul class="sg-nav__level2">
+                        <li><a class="sg-link" href="../../pattern-library/macro-modules/figure.html">Figure</a></li>
+                        <li><a class="sg-link" href="../../pattern-library/macro-modules/image-block-modal.html">Image Block Modal</a></li>
+                        <li><a class="sg-link" href="../../pattern-library/macro-modules/nav-content.html">Nav Content</a></li>
+                        <li><a class="sg-link" href="../../pattern-library/macro-modules/nav-guide.html">Nav Guide</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="../../pattern-library/display-templates/index.html" class="sg-nav__level1-title open-sans--semibold">Display Templates</a>
+                </li>
+                <li>
+                    <a href="../../pattern-library/image-sizes/index.html" class="sg-nav__level1-title open-sans--semibold">Image Sizes</a>
+                </li>
+                <li>
+                    <a href="../../pattern-library/appendix/index.html" class="sg-nav__level1-title open-sans--semibold">Appendix</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="sg-content-wrap">
+
+        <header class="sg-header">
+            <div class="sg-header__inner sg-contain">
+                <div class="sg-header__left">
+                    <a href="../../pattern-library/index.html" class="sg-logo">
+                        <img src="../../pattern-library/logo.png" alt="Pattern Library Logo">
+                    </a>
+                </div>
+                <div class="sg-header__right">
+                    <button type="button" class="sg-nav-open open-sans open-sans--semibold js-sg-nav-toggle">Menu<span class="sg-nav-icon-wrap"><span class="sg-nav-icon"></span></span></button>
+                </div>
+            </div>
+        </header>
+
+        <div class="sg-contain">
+            <div class="sg-utility sg-u-cf">
+                <ul class="sg-breadcrumb l-float-l">
+                    <li class="open-sans open-sans--semibold">
+                        <a class="sg-link" href="../../pattern-library/index.html">Design Pattern Library</a>
+                    </li>
+                
+                    <li class="open-sans open-sans--semibold">
+                        <a class="sg-link" href="../../pattern-library/macro-modules/index.html">Macro Modules</a>
+                    </li>
+                
+                    <li class="open-sans open-sans--semibold">
+                        Image Block Modal
+                    </li>
+                </ul>
+                    <button type="button" class="sg-toggle-all open-sans u-float-r js-sg-toggle-all">
+                        <span class="show-if-collapsed">Show</span>
+                        <span class="show-if-expanded">Hide</span>
+                        All Code/Annotations
+                    </button>            </div>
+            <div id="image-block-modal" class="sg-block js-sg-block module-is-collapsed">
+                <div class="sg-block__header">
+                    <h2 class="sg-block__title open-sans open-sans--semibold">Image Block Modal</h2>
+                    <span class="sg-block__expand-toggle open-sans js-sg-block__expand-toggle">
+                        <span class="show-if-collapsed">Show</span>
+                        <span class="show-if-expanded">Hide</span>
+                        Code/Annotations
+                    </span>
+                </div>
+                <div class="sg-block__content sg-u-cf">
+                    <div class="sg-block__example sg-u-cf">
+                        <section >
+                            <div class="image-block-modal js-image-block-modal is-closed">
+                <div class="image-block-modal__wrap">
+                    <div class="image-block-modal__content">
+                    </div>
+                    <a href="#" class="image-block-modal__previous js-image-block-modal__previous icon-link icon-link--previous">Previous</a>
+                    <a href="#" class="image-block-modal__next js-image-block-modal__next icon-link icon-link--next">Next</a>
+                </div>
+            </div>
+                        </section>
+                    </div>
+                    <div class="sg-block__more is-collapsed js-sg-block__more">
+                        <div class="sg-block__html">
+                            <h3 class="sg-block__header2 open-sans open-sans--semibold">HTML</h3>
+                            <pre><code class="language-markup">&lt;div class&#x3D;&quot;image-block-modal js-image-block-modal is-closed&quot;&gt;
+                &lt;div class&#x3D;&quot;image-block-modal__wrap&quot;&gt;
+                    &lt;div class&#x3D;&quot;image-block-modal__content&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;image-block-modal__previous js-image-block-modal__previous icon-link icon-link--previous&quot;&gt;Previous&lt;/a&gt;
+                    &lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;image-block-modal__next js-image-block-modal__next icon-link icon-link--next&quot;&gt;Next&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;</code></pre>
+                        </div>
+                        <div class="sg-block__notes">
+                            <h3 class="sg-block__header2 open-sans open-sans--semibold">Notes</h3>
+                            <div class="open-sans">
+            <p>Image Block Modal</p>
+                            </div>
+                                    <p class="open-sans open-sans--semibold">Templates this appears on:</p>
+                                    <ul class="open-sans">
+                                        <li><a class="sg-link" href="../../ProductionTemplates/how-to-guides-detail.html" target="_blank">How-To-Guides - Detail</a></li>
+                                    </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../../js/main.js" async defer></script>
+
+    <!--[if gte IE 9]><!-->
+    <script src="../../pattern-library/prism.js"></script>
+    <!--<![endif]-->
+    <script src="../../pattern-library/yapl.js"></script>
+
+</body>
+</html>

@@ -10,7 +10,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Home</title>
+        <title>How-To-Guides - Landing</title>
         <meta name="description" content="[PAGE DESCRIPTION]">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -30,13 +30,13 @@
         <meta name="twitter:image" content="/path/to/image.jpg"><!-- minimum size of 120px by 120px and must be less than 1MB in file size. -->
 
         <!-- The page's canonical URL (absent of query strings, hash tags, etc.) -->
-        <link rel="canonical" href="./path/to/page.html">
+        <link rel="canonical" href="../path/to/page.html">
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
         <link rel="stylesheet" href="https://use.typekit.net/vzb0ccr.css">
-        <link rel="stylesheet" href="./css/main.css">
+        <link rel="stylesheet" href="../css/main.css">
         
         <!--
             *** Only show this "potentialAction" section on the HOME / INDEX of the site, and change markup to match the site: ***
@@ -70,11 +70,6 @@
              "[ORG TWITTER URL]",
              "[ORG LINKEDIN URL]"
            ],
-           "potentialAction": {
-             "@type": "SearchAction",
-             "target": "[SEARCH URL]?q={search_term_string}",
-             "query-input": "required name=search_term_string"
-           }
         }
         </script>
     </head>
@@ -144,124 +139,133 @@
         <main class="l-content-primary">
             
     <!-- YAPL
-    name: Home Page
-    notes: The landing page for the site.
+    name: How-To-Guides - Landing
+    notes: General content detail page which provides an example of rich text styles and other basic page elements.
     -->
-
-    <div class="hero hero--home" style="background-image: url('./images/temp/hp-hero.jpg')">
-        <div class="hero__text-box l-contain">
-            <h2 class="hero__title">Resources for the Data Collection Community</h2>
-            <p class="hero__subtitle">The Global Health Community uses surveys to conduct health reserach in low- and middle-income countries. This website collates freely available data collection resources, and reccomendations that have come out of our experiences.</p>
+    <div class="background--gray">
+        <div class="hero hero--inner" style="background-image: url('../images/temp/htgl-hero.jpg')">
+            <div class="hero__text-box l-contain">
+                <h2 class="hero__title">How-To-Guides</h2>
+                <p class="hero__subtitle">Descriptive Text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</p>
+            </div>
+            <div class="hero__color-overlay"></div>
         </div>
-        <div class="hero__color-overlay"></div>
-    </div>
 
-    <div class="l-tiles l-tiles--home js-tiles">
-        <div class="tiles__inner l-contain">
-                    <div class="tile tile--inner js-tile" tabindex="0">
-                <div class="tile__content">
-                    
-                    <div class="tile__icon-container">
-                        <img class="tile__icon" src="./images/assets/icon/book--teal.svg" alt="">
-                    </div>
-                    <h3 class="tile__title">How-To-Guides</h3>
-                    <div class="tile__inner">
+        <div class="l-tiles l-tiles--landing">
+            <div class="tiles__inner l-contain">
+                        <a class="tile tile--inner" href="#">
+                    <div class="tile__content">
+                        <div class="tile__tag">ODK</div>
+                        <div class="tile__icon-container">
+                            <img class="tile__icon" src="../images/assets/icon/molecule--teal.svg" alt="">
+                        </div>
                         
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</p> <a href="#" class="btn btn--hollow">View Guides</a>
-    
+                        <div class="tile__inner">
+                            <h3 class="tile__title">Overview of your ODK System</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus.</p> <div class="btn btn--teal">Learn More</div>
+        
+                        </div>
                     </div>
-                </div>
-            </div>
-                    <div class="tile tile--inner js-tile" tabindex="0">
-                <div class="tile__content">
-                    
-                    <div class="tile__icon-container">
-                        <img class="tile__icon" src="./images/assets/icon/notes--teal.svg" alt="">
-                    </div>
-                    <h3 class="tile__title">Questionnaires</h3>
-                    <div class="tile__inner">
+                </a>
+                        <a class="tile tile--inner" href="#">
+                    <div class="tile__content">
+                        <div class="tile__tag">ODK</div>
+                        <div class="tile__icon-container">
+                            <img class="tile__icon" src="../images/assets/icon/notes--teal.svg" alt="">
+                        </div>
                         
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</p> <a href="#" class="btn btn--hollow">View Questionnaires</a>
-    
+                        <div class="tile__inner">
+                            <h3 class="tile__title">Creating an XLS Form Questionnaire</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus.</p> <div class="btn btn--teal">Learn More</div>
+        
+                        </div>
                     </div>
-                </div>
-            </div>
-                    <div class="tile tile--inner js-tile" tabindex="0">
-                <div class="tile__content">
-                    
-                    <div class="tile__icon-container">
-                        <img class="tile__icon" src="./images/assets/icon/graphs--teal.svg" alt="">
-                    </div>
-                    <h3 class="tile__title">Dash Reports</h3>
-                    <div class="tile__inner">
+                </a>
+                        <a class="tile tile--inner" href="#">
+                    <div class="tile__content">
+                        <div class="tile__tag">ODK</div>
+                        <div class="tile__icon-container">
+                            <img class="tile__icon" src="../images/assets/icon/server--teal.svg" alt="">
+                        </div>
                         
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</p> <a href="#" class="btn btn--hollow">View Reports</a>
-    
+                        <div class="tile__inner">
+                            <h3 class="tile__title">Deploying a Remote Server</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus.</p> <div class="btn btn--teal">Learn More</div>
+        
+                        </div>
                     </div>
-                </div>
-            </div>
-                    <div class="tile tile--inner js-tile" tabindex="0">
-                <div class="tile__content">
-                    
-                    <div class="tile__icon-container">
-                        <img class="tile__icon" src="./images/assets/icon/layers--teal.svg" alt="">
-                    </div>
-                    <h3 class="tile__title">Nav Item 4</h3>
-                    <div class="tile__inner">
+                </a>
+                        <a class="tile tile--inner" href="#">
+                    <div class="tile__content">
+                        <div class="tile__tag">ODK</div>
+                        <div class="tile__icon-container">
+                            <img class="tile__icon" src="../images/assets/icon/phone-alt--teal.svg" alt="">
+                        </div>
                         
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</p> <a href="#" class="btn btn--hollow">View Item</a>
-    
+                        <div class="tile__inner">
+                            <h3 class="tile__title">The Handheld Device</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus.</p> <div class="btn btn--teal">Learn More</div>
+        
+                        </div>
                     </div>
-                </div>
-            </div>
-                    <div class="tile tile--inner js-tile" tabindex="0">
-                <div class="tile__content">
-                    
-                    <div class="tile__icon-container">
-                        <img class="tile__icon" src="./images/assets/icon/folder--teal.svg" alt="">
-                    </div>
-                    <h3 class="tile__title">Additional Resources</h3>
-                    <div class="tile__inner">
+                </a>
+                        <a class="tile tile--inner" href="#">
+                    <div class="tile__content">
+                        <div class="tile__tag">ODK</div>
+                        <div class="tile__icon-container">
+                            <img class="tile__icon" src="../images/assets/icon/download--teal.svg" alt="">
+                        </div>
                         
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</p> <a href="#" class="btn btn--hollow">View Resources</a>
-    
+                        <div class="tile__inner">
+                            <h3 class="tile__title">Downloading and Merging Data</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus.</p> <div class="btn btn--teal">Learn More</div>
+        
+                        </div>
                     </div>
-                </div>
-            </div>
-                    <div class="tile tile--inner js-tile" tabindex="0">
-                <div class="tile__content">
-                    
-                    <div class="tile__icon-container">
-                        <img class="tile__icon" src="./images/assets/icon/question--teal.svg" alt="">
-                    </div>
-                    <h3 class="tile__title">Questions? Contact us</h3>
-                    <div class="tile__inner">
+                </a>
+                        <a class="tile tile--inner" href="#">
+                    <div class="tile__content">
+                        <div class="tile__tag">ODK</div>
+                        <div class="tile__icon-container">
+                            <img class="tile__icon" src="../images/assets/icon/magnifying-glass--teal.svg" alt="">
+                        </div>
                         
-                        <a href="mailto:emailaddress@jhu.edu" class="icon-link icon-link--email icon-link--before">emailaddress@jhu.edu</a> <a href="410-955-3543" class="icon-link icon-link--phone icon-link--before">410-955-3543</a>
-    
+                        <div class="tile__inner">
+                            <h3 class="tile__title">Monitoring Incoming Survey Data</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus.</p> <div class="btn btn--teal">Learn More</div>
+        
+                        </div>
                     </div>
-                </div>
+                </a>
+                        <a class="tile tile--inner" href="#">
+                    <div class="tile__content">
+                        <div class="tile__tag">ODK</div>
+                        <div class="tile__icon-container">
+                            <img class="tile__icon" src="../images/assets/icon/book-alt--teal.svg" alt="">
+                        </div>
+                        
+                        <div class="tile__inner">
+                            <h3 class="tile__title">Best Practices</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus.</p> <div class="btn btn--teal">Learn More</div>
+        
+                        </div>
+                    </div>
+                </a>
+                        <a class="tile tile--inner" href="#">
+                    <div class="tile__content">
+                        <div class="tile__tag">ODK</div>
+                        <div class="tile__icon-container">
+                            <img class="tile__icon" src="../images/assets/icon/tablet--teal.svg" alt="">
+                        </div>
+                        
+                        <div class="tile__inner">
+                            <h3 class="tile__title">Tablet Handling Guidelines</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus.</p> <div class="btn btn--teal">Learn More</div>
+        
+                        </div>
+                    </div>
+                </a>
             </div>
-        </div>
-    </div>
-
-    <div class="l-feature-image background--teal">
-        <div class="feature-image__container l-contain">
-            <div class="feature-image__image-container">
-                <img class="feature-image__image" src="./images/temp/hp-feature.jpg" alt="image alt text">
-            </div>
-            <div class="feature-image__text">
-                <h3 class="feature-image__title">Why a Resource Center?</h3>
-                <p class="feature-image__caption">Some of the tools we use, such as ODK, can be found elsewhere and this website refers you to their original sources. Other tools, such as the questionnaires, extend existing tools and can be downloaded, replicated, edited, or further adapted. Finally, tools such as the Questionnaire Compiler and Dash Report have been created by Johns Hopkins School of Public Health to fill particular needs in the data collection pipeline: to create surveys more easily, and to monitor survey data quality.</p>
-                <a href="#" class="btn btn--teal">Meet the Contributors</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="l-sponsor-info background--gray">
-        <div class="sponsor-info__images l-contain">
-            <img class="sponsor-info__image" src="./images/assets/logos/bloomberg-logo.png" alt="Johns Hopkins Bloomberg School of Public Health Logo">
-            <img class="sponsor-info__image" src="./images/assets/logos/radar-logo.png" alt="JHU RADAR Logo">
         </div>
     </div>
 
@@ -282,7 +286,7 @@
             </div>
         </footer>
 
-        <script src="./js/main.js" async defer></script>
+        <script src="../js/main.js" async defer></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be site's ID. -->
         <!-- <script>
