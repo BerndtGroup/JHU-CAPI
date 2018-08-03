@@ -17,7 +17,6 @@
 
 .sponsor-info__image {
     max-width: rem-calc(200);
-    mix-blend-mode: multiply;
 
     @include small-only {
         &:first-child {

@@ -74,9 +74,10 @@
 
         &.is-open {
             .tile__content {
+                background-color: $blue-2;
                 box-shadow: 0 0 rem-calc(50) rgba($black, .45);
                 padding-top: 1.75rem;
-                transform: translateY(-60px);
+                transform: translateY(-12px);
             }
 
             .tile__inner {
@@ -84,6 +85,7 @@
                 max-height: rem-calc(200);
                 opacity: 1;
                 padding-top: .5rem;
+                visibility: visible;
             }
         }
     }
@@ -98,7 +100,7 @@
     flex-direction: column;
     padding: 1.5rem 1rem;
     transition: .5s ease;
-    transition-property: box-shadow, transform, padding;
+    transition-property: box-shadow, transform, padding, background;
 
     @include medium-and-above {
         height: rem-calc(375);
@@ -110,6 +112,9 @@
 .tile__icon-container {
     align-items: center;
     background-color: $white;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50% 50%;
     border-radius: 50%;
     display: flex;
     flex-shrink: 0;
@@ -136,21 +141,9 @@
         .is-open & {
             height: rem-calc(89);
             transition: .5s ease;
+            transition-property: width, height;
             width: rem-calc(89);
-
-            img {
-                max-height: rem-calc(50);
-                max-width: rem-calc(48);
-                transition: .5s ease;
-            }
-        }
-
-        img {
-            max-height: rem-calc(100);
-            max-width: rem-calc(90);
-
-            transition: .4s ease;
-            transition-property: max-height, max-width;
+            will-change: width, height;
         }
     }
 }
@@ -193,6 +186,7 @@
 }
 
 .tile__inner {
+    // visibility: hidden;
     width: 100%;
 
     @include small-only {

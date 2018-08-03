@@ -2,14 +2,12 @@
     <div class="tiles__inner l-contain">
         {{#each items}}
         {{#if inner}}
-        <div class="tile tile--inner js-tile" tabindex="0">
+        <div class="tile tile--inner js-tile">
         {{else}}
         <div class="tile">
         {{/if}}
             <div class="tile__content">
-                <div class="tile__icon-container">
-                    <img class="tile__icon" src="/images/{{icon}}" alt="">
-                </div>
+                <div class="tile__icon-container" style="background-image: url('/images/{{icon}}')"></div>
                 <h3 class="tile__title">{{title}}</h3>
                 {{#if inner}}<div class="tile__inner">{{{inner}}}</div>{{/if}}
             </div>
