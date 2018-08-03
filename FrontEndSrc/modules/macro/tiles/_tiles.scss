@@ -176,9 +176,9 @@
     flex-shrink: 0;
     justify-content: center;
     padding: 1.5rem;
+    transform: scale(1);
     transition: .4s ease;
-    transition-property: width, height;
-    will-change: width, height;
+    transition-property: margin, transform, width, height;
 
     @include small-only {
         .l-tiles--home & {
@@ -204,9 +204,17 @@
         }
 
         .is-open & {
-            height: rem-calc(89);
-            transition: .5s ease;
-            width: rem-calc(89);
+            html:not(.is-ie):not(.is-edge) & {
+                height: rem-calc(89);
+                width: rem-calc(89);
+            }
+
+            .is-ie &,
+            .is-edge & {
+                margin: -3rem 0;
+                transform: scale(.55);
+                transition-duration: .5s;
+            }
         }
     }
 }

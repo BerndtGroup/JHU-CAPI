@@ -11,14 +11,16 @@ import debounce from 'lodash.debounce'
 window.debounce = debounce
 window.throttle = throttle
 
-
 // Project Modules
 import Tiles from 'modules/macro/tiles/tiles.js'
 import Header from 'layout/header/header.js'
 import ImageBlockModal from 'modules/macro/image-block-modal/image-block-modal.js'
 import NavContent from 'modules/macro/nav-content/nav-content.js'
+import Media from './imports/media.js'
 
 $('html').removeClass('no-js')
+
+Media()._init()
 
 $('.js-header').each(function(index, wrap) {
     Header().init({
