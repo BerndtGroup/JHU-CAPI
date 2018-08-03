@@ -76,6 +76,8 @@
         @include medium-and-below {
             &.is-menu-open {
                 .nav-primary__l1-item-link {
+                    border-color: $teal-1;
+
                     &::after {
                         transform: rotateZ(180deg);
                     }

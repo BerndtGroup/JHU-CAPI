@@ -34,6 +34,7 @@
 
             .l-header__inner {
                 align-items: center;
+                padding: 0 1rem .5rem;
             }
 
             .nav-wrap {
@@ -41,8 +42,7 @@
             }
 
             .header__logo {
-                font-size: rem-calc(18);
-                margin-bottom: .25rem;
+                transform: scale(.8);
             }
         }
     }
@@ -57,7 +57,7 @@
     }
 
     @include large-and-above {
-        align-items: flex-end;
+        align-items: center;
         border-bottom: 2px solid $white;
         display: flex;
         justify-content: space-between;
@@ -65,6 +65,7 @@
         margin-right: auto;
         max-width: $contain-max-width;
         padding-bottom: .5rem;
+        transition: padding .4s ease;
         width: $contain-inner-width;
     }
 }
@@ -77,12 +78,11 @@
 .header__logo {
     font-size: rem-calc(24);
     font-weight: 700;
-    margin-bottom: 1rem;
     margin-right: 1rem;
     max-width: rem-calc(125);
     text-transform: uppercase;
     transition: .5s ease;
-    transition-property: font-size, margin, color;
+    transition-property: transform, color;
 
     @include medium-and-below {
         color: $black;

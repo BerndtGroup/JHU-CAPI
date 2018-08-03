@@ -20,7 +20,7 @@
     padding: 2rem;
 
     @include large-and-above {
-        flex: 0 0 50%;
+        width: 50%;
     }
 
     .btn {
@@ -49,15 +49,14 @@
 }
 
 .feature-image__image-container {
+    background-position: center;
+    background-size: cover;
+    max-height: rem-calc(400);
+    min-height: rem-calc(300);
+    width: 100%;
+
     @include large-and-above {
-        flex: 0 0 50%;
+        width: 50%;
     }
 }
 
-.feature-image__image {
-    height: 100%;
-    max-height: rem-calc(400);
-    min-height: rem-calc(300);
-    object-fit: cover;
-    width: 100%;
-}

@@ -17,7 +17,8 @@ export default function() {
 
             if ($wrap) {
                 $ui = {
-                    tiles: $wrap.find('.js-tile')
+                    tiles: $wrap.find('.js-tile'),
+                    links: $wrap.find('.js-tile a')
                 }
 
                 _self.bindUIActions()
@@ -25,22 +26,21 @@ export default function() {
         },
 
         bindUIActions: function() {
-            $ui.tiles.on('mouseenter', _self.events.tileHover)
+            $ui.tiles.on('mouseenter', _self.events.tileOpen)
             $ui.tiles.on('mouseleave', _self.events.tileClose)
-            $ui.tiles.on('focus', _self.events.tileOpen)
+            if ($ui.links.length > 0) {
+                $ui.links.on('focus', _self.events.tileOpen)
+                $ui.links.on('blur', _self.events.tileClose)
+            }
         },
 
         events: {
-            tileHover: function(e) {
-                $($(e.target).closest('.js-tile')).toggleClass('is-open')
-            },
-
             tileOpen: function(e) {
-                $($(e.target).closest('.js-tile')).addClass('is-open')
+                $(e.target).closest('.js-tile').addClass('is-open')
             },
 
             tileClose: function(e) {
-                $($(e.target).closest('.js-tile')).removeClass('is-open')
+                $(e.target).closest('.js-tile').removeClass('is-open')
             },
         }
     }
