@@ -74,9 +74,10 @@
 
             &.is-open {
                 .tile__content {
+                    background-color: $blue-2;
                     box-shadow: 0 0 rem-calc(50) rgba($black, .45);
                     padding-top: 1.75rem;
-                    transform: translateY(-60px);
+                    transform: translateY(-12px);
                 }
 
                 .tile__inner {
@@ -146,7 +147,7 @@
         box-shadow: none;
         padding: 1.5rem 1rem;
         transition: .5s ease;
-        transition-property: box-shadow, transform, padding;
+        transition-property: box-shadow, transform, padding, background;
 
         @include medium-and-above {
             height: rem-calc(375);
@@ -167,7 +168,10 @@
 .tile__icon-container {
     align-items: center;
     background-color: $white;
-    border-radius: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    border-radius: 52%;
     display: flex;
     flex-shrink: 0;
     justify-content: center;
@@ -186,18 +190,6 @@
             height: rem-calc(115);
             width: rem-calc(115);
         }
-
-        img {
-            .l-tiles--home & {
-                max-height: rem-calc(38);
-                max-width: rem-calc(38);
-            }
-
-            .l-tiles--landing & {
-                max-height: rem-calc(60);
-                max-width: rem-calc(60);
-            }
-        }
     }
 
     @include medium-and-above {
@@ -215,27 +207,6 @@
             height: rem-calc(89);
             transition: .5s ease;
             width: rem-calc(89);
-
-            img {
-                max-height: rem-calc(50);
-                max-width: rem-calc(48);
-                transition: .5s ease;
-            }
-        }
-
-        img {
-            .l-tiles--home & {
-                max-height: rem-calc(100);
-                max-width: rem-calc(90);
-            }
-
-            .l-tiles--landing & {
-                max-height: rem-calc(78);
-                max-width: rem-calc(78);
-            }
-
-            transition: .4s ease;
-            transition-property: max-height, max-width;
         }
     }
 }
@@ -272,6 +243,7 @@
 
     .l-tiles--landing & {
         margin-bottom: 1rem;
+        transition: color .4s ease;
 
         &::after {
             left: calc(50% - 30px);

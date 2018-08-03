@@ -16,8 +16,7 @@
         {{/if}}
             <div class="tile__content">
                 {{#if tag}}<div class="tile__tag">{{{tag}}}</div>{{/if}}
-                <div class="tile__icon-container">
-                    <img class="tile__icon" src="/images/{{icon}}" alt="">
+                <div class="tile__icon-container" style="background-image: url('/images/{{icon}}')">
                 </div>
                 {{#if ../is-expandable}}<h3 class="tile__title">{{{title}}}</h3>{{/if}}
                 {{#if inner}}
