@@ -40,6 +40,17 @@
         max-width: rem-calc(265);
         width: 40%;
     }
+
+    .link-block--shadowed-image & {
+        background-size: 100%;
+        border-radius: 7px;
+        box-shadow: 0 0 rem-calc(15) $black-thirty-five;
+
+        @include small-only {
+            background-position: left center;
+            margin-bottom: 2rem;
+        }
+    }
 }
 
 .link-block__content {
@@ -51,11 +62,22 @@
         padding: 2rem;
     }
 
+    .link-block--shadowed-image & {
+        p:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+
     .btn {
         margin-top: 1rem;
     }
 
     @include medium-and-above {
         padding: 2rem;
+
+        .link-block--shadowed-image & {
+            padding-bottom: 0;
+            padding-top: 0;
+        }
     }
 }

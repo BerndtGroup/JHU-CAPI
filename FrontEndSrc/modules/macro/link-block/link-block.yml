@@ -55,6 +55,7 @@ questionnaires:
       image: temp/ms-link-1.jpg
 
 tablets:
+  modifier: shadowed-image
   items:
     - text: 'Electronic tablets or Smartphones with the Android operating system are required to collect data. Internet connectivity is not necessary for data collection, but it is required for software installation, configuration, form download, and data submission.<br><br>ODK Collect must be downloaded from the Google Play store and installed on the device.'
       image: temp/htgd-tablets.jpg
