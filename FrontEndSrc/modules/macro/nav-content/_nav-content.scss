@@ -152,16 +152,23 @@
 
     .nav-content-wrap {
         max-width: rem-calc(400);
+        position: fixed;
+        top: 16rem;
+        transition: top .3s ease, position .3s ease;
         width: 23vw;
 
         &.is-absolute {
             bottom: 2rem;
             position: absolute;
+            top: auto;
         }
 
-        &.is-fixed {
-            position: fixed;
-            top: 11rem;
+        .l-header.is-collapsed + .l-content-wrap & {
+            top: 10rem;
+
+            &.is-absolute {
+                top: auto;
+            }
         }
     }
 
