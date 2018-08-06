@@ -154,7 +154,12 @@
         max-width: rem-calc(400);
         width: 23vw;
 
-        &.is-sticky {
+        &.is-absolute {
+            bottom: 2rem;
+            position: absolute;
+        }
+
+        &.is-fixed {
             position: fixed;
             top: 11rem;
         }

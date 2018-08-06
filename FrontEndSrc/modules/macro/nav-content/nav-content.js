@@ -40,10 +40,14 @@ export default function() {
         },
 
         updateNavState: function() {
-            if ($document.scrollTop() + window.innerHeight < $ui.navGuide.offset().top && $(this).scrollTop() > $('.l-content-primary').offset().top + parseInt($('.rtf').css('marginTop')) - $ui.header.outerHeight()) {
-                $wrap.addClass('is-sticky');
+            var navGuideTopOffset = $('.js-nav-guide').offset().top;
+
+            if ($document.scrollTop() + $window.height() > navGuideTopOffset) {
+                $wrap.addClass('is-absolute').removeClass('is-fixed');
+            } else if ($document.scrollTop() + $window.height() < $ui.navGuide.offset().top && $(this).scrollTop() > $('.l-content-primary').offset().top + parseInt($('.rtf').css('marginTop')) - $ui.header.outerHeight()) {
+                $wrap.addClass('is-fixed').removeClass('is-absolute');
             } else {
-                $wrap.removeClass('is-sticky');
+                $wrap.removeClass('is-fixed is-absolute');
             }
         },
 

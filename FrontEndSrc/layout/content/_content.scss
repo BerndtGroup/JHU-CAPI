@@ -36,7 +36,6 @@
     // Primary Column
     .l-content-primary {
         .l-2-col-master & {
-            float: left;
             margin-left: 3.333333333%; // 40px
             width: 70.666666666%; // 848px
         }
@@ -44,10 +43,8 @@
 
     // Secondary Column
     .l-content-secondary {
-        float: left;
-        min-height: 1px;
-
         .l-2-col-master & {
+            display: flex;
             position: relative;
             width: 26%; // 312px
         }
