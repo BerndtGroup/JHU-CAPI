@@ -99,6 +99,9 @@ export default function() {
             $body.addClass('no-scroll');
             setTimeout(function() { internal.isOpen = true; }, 50);
             _self.showSlide(index);
+            $body.on('touchmove', function(e) {
+                e.preventDefault()
+            });
         },
 
         closeModal: function(e) {
@@ -107,6 +110,7 @@ export default function() {
             if (internal.isOpen && !$(e.target).closest('.js-image-block-modal__next, .js-image-block-modal__previous, .js-image-block__expand-toggle, .js-image-block-modal__text').length) {
                 $wrap.removeClass('is-open').addClass('is-closed');
                 $body.removeClass('no-scroll');
+                $body.off('touchmove');
                 internal.isOpen = false;
             }
         }
