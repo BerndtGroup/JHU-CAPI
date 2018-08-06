@@ -86,6 +86,7 @@
         position: absolute;
 
         @include medium-and-below {
+            margin-top: .5rem;
         }
 
         @include large-and-above {
