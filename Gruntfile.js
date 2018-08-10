@@ -552,7 +552,6 @@ module.exports = function (grunt) {
         // Build
         'assemble:pages',
         // Copy
-        // 'copy:appVendorCssToTmp',
         'copy:appVendorJsToTmp',
         'copy:appToTmp',
         // Concurrent: browserify:appToTmp, sass:appToTmp, newer:imagemin
@@ -565,12 +564,6 @@ module.exports = function (grunt) {
         'cssmin:tmp', // minify css in tmp
         'replace:patternLibrary'
     ]);
-
-    // grunt.registerTask('bed', [
-    //     'clean:dist',
-    //     // 'imageEmbed:tmp', //FIXME Throwing error
-    //     'copy:tmpAndPatternLibraryToDist'
-    // ]);
 
     grunt.registerTask('default', function () {
         var skipNpmInstall = grunt.option('skip-install');
@@ -592,11 +585,9 @@ module.exports = function (grunt) {
         // Build
         'assemble:pages',
         // Copy
-        // 'copy:appVendorCssToTmp',
         'copy:appVendorJsToTmp',
         'copy:appToTmp',
         'copy:TemplatesToTmpGhPages',
-        // Concurrent: browserify:appToTmp, sass:appToTmp, newer:imagemin
         'concurrent:tmp',
         // YAPL
         'yapl',
