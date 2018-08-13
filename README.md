@@ -1,4 +1,4 @@
-# Project Title
+# JHU CAPI HTML Templates
 
 > This readme.md acts as a starting point for the front end code of new TBG projects, update this file, and this description as new projects transtion into production.
 
