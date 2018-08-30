@@ -22,7 +22,12 @@
 
 To work locally on front end files, follow these steps. First, if you do not have Node installed on your computer:
 
-1. [Download Node here](https://nodejs.org/) and run the installer. In general, the latest LTS version should work fine.
+1. Download [Node Version Manager for Windows](https://github.com/coreybutler/nvm-windows/releases) (nvm-setup.zip) and run the installer, or [Node Version Manager for Mac](https://github.com/creationix/nvm#installation) and follow the installation instructions.
+> Note: This project currently requires Node.js version 6.4.0, and issues have been encountered with newer versions. To use Node.js 6.4.0, install via the terminal/command line using Node Version Manager
+```
+nvm install 6.4.0
+nvm use 6.4.0
+```
 2. Install [Grunt](http://gruntjs.com/) globally via the terminal/command line
 
 ```
