@@ -42,6 +42,10 @@
     @include small-only {
         background-position: top center;
     }
+
+    @include medium-and-above {
+        flex-grow: 1;
+    }
 }
 
 .image-block__content {
